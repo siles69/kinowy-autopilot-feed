@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rolki reklamowe dla Twojej firmy — pierwsza za darmo | Katowice</title>
+<meta name="description" content="Krótkie pionowe filmy reklamowe (9:16, 20–35 s) z polskim lektorem i napisami dla lokalnych firm z Katowic i okolic. Pierwszy film z nazwą Twojej firmy — gratis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0f0f12;
+    --bg-2:#17171c;
+    --bg-3:#1f1f26;
+    --line:#2b2b35;
+    --text:#f2f1ec;
+    --muted:#a7a6a0;
+    --amber:#f5a524;
+    --amber-2:#ffc45c;
+    --amber-ink:#1a1200;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  img,video{max-width:100%;display:block}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+  section{padding:64px 0}
+  h1,h2,h3{line-height:1.15;margin:0 0 .5em;letter-spacing:-.01em}
+  h1{font-size:clamp(2rem,6vw,3.4rem);font-weight:800}
+  h2{font-size:clamp(1.5rem,4vw,2.2rem);font-weight:800}
+  h3{font-size:1.1rem;font-weight:600}
+  p{margin:0 0 1em}
+  .muted{color:var(--muted)}
+  .eyebrow{display:inline-block;color:var(--amber);font-weight:600;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
+
+  /* nagłówek */
+  header.top{position:sticky;top:0;z-index:10;background:rgba(15,15,18,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .brand{font-weight:800;text-decoration:none;display:flex;align-items:center;gap:8px}
+  .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--amber)}
+  nav a{color:var(--muted);text-decoration:none;font-size:.95rem;margin-left:18px}
+  nav a:hover{color:var(--text)}
+  nav .only-wide{display:none}
+  @media(min-width:720px){nav .only-wide{display:inline}}
+
+  /* hero */
+  .hero{padding:72px 0 48px;background:radial-gradient(900px 400px at 20% -10%,rgba(245,165,36,.18),transparent 60%)}
+  .hero p.lead{font-size:1.15rem;max-width:640px}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border-radius:10px;font-weight:600;text-decoration:none;border:1px solid var(--line);background:var(--bg-2);transition:transform .1s,background .15s}
+  .btn:hover{transform:translateY(-1px);background:var(--bg-3)}
+  .btn.primary{background:var(--amber);color:var(--amber-ink);border-color:var(--amber)}
+  .btn.primary:hover{background:var(--amber-2)}
+  .facts{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:28px;color:var(--muted);font-size:.95rem}
+  .facts span::before{content:"✓";color:var(--amber);margin-right:8px;font-weight:700}
+
+  /* demo */
+  .grid{display:grid;gap:20px;grid-template-columns:repeat(2,1fr)}
+  @media(min-width:720px){.grid{grid-template-columns:repeat(3,1fr)}}
+  .card{background:var(--bg-2);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .card .frame{position:relative;aspect-ratio:9/16;background:#000}
+  .card video{width:100%;height:100%;object-fit:cover}
+  .card .frame .fallback code{word-break:break-all;font-size:.8em}
+  .card .frame .fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;color:var(--muted);font-size:.9rem;background:linear-gradient(160deg,#1f1f26,#121216)}
+  .card .frame video:not([data-missing]) + .fallback{display:none}
+  .card .cap{padding:12px 14px}
+  .card .cap b{display:block;font-size:.98rem}
+  .card .cap small{color:var(--muted)}
+  .note{font-size:.9rem;color:var(--muted);margin-top:18px}
+
+  /* kroki */
+  .steps{display:grid;gap:18px;grid-template-columns:1fr}
+  @media(min-width:720px){.steps{grid-template-columns:repeat(3,1fr)}}
+  .step{background:var(--bg-2);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .step .num{width:36px;height:36px;border-radius:50%;background:var(--amber);color:var(--amber-ink);font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+
+  /* cennik */
+  .plans{display:grid;gap:18px;grid-template-columns:1fr}
+  @media(min-width:860px){.plans{grid-template-columns:repeat(3,1fr)}}
+  .plan{background:var(--bg-2);border:1px solid var(--line);border-radius:16px;padding:26px;display:flex;flex-direction:column;position:relative}
+  .plan.featured{border-color:var(--amber);box-shadow:0 0 0 1px var(--amber) inset}
+  .plan .tag{position:absolute;top:-12px;left:22px;background:var(--amber);color:var(--amber-ink);font-size:.75rem;font-weight:700;padding:4px 10px;border-radius:999px;letter-spacing:.05em;text-transform:uppercase}
+  .price{font-size:2.2rem;font-weight:800;margin:6px 0 2px}
+  .price small{font-size:1rem;font-weight:500;color:var(--muted)}
+  .plan ul{list-style:none;padding:0;margin:16px 0 22px;color:#d8d7d0}
+  .plan li{padding:7px 0;border-top:1px solid var(--line)}
+  .plan li::before{content:"—";color:var(--amber);margin-right:8px}
+  .plan .btn{margin-top:auto}
+  .addon{margin-top:18px;background:var(--bg-2);border:1px dashed var(--line);border-radius:12px;padding:14px 18px;color:var(--muted)}
+  .addon b{color:var(--text)}
+
+  /* faq */
+  details{background:var(--bg-2);border:1px solid var(--line);border-radius:12px;padding:0 18px;margin-bottom:10px}
+  summary{cursor:pointer;padding:16px 0;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--amber);font-weight:800;font-size:1.2rem;line-height:1}
+  details[open] summary::after{content:"–"}
+  details p{padding-bottom:16px;color:#d8d7d0}
+
+  /* kontakt */
+  .contact{background:linear-gradient(180deg,var(--bg-2),var(--bg));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .contact-grid{display:grid;gap:12px;grid-template-columns:1fr 1fr;max-width:620px}
+  @media(min-width:720px){.contact-grid{grid-template-columns:repeat(4,1fr)}}
+  .contact .btn{width:100%;padding:16px 10px;flex-direction:column;gap:6px}
+  .contact .btn svg{width:24px;height:24px;fill:var(--amber)}
+  .contact .btn.primary svg{fill:var(--amber-ink)}
+
+  footer{padding:28px 0 40px;color:var(--muted);font-size:.85rem}
+  footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#"><span class="dot"></span>Rolki dla firm · Katowice</a>
+    <nav>
+      <a href="#demo">Demo</a>
+      <a class="only-wide" href="#jak">Jak to działa</a>
+      <a href="#cennik">Cennik</a>
+      <a class="only-wide" href="#faq">FAQ</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Krótkie filmy reklamowe 9:16 · Katowice i okolice</span>
+    <h1>Rolki reklamowe dla Twojej firmy — pierwsza za darmo</h1>
+    <p class="lead">Robię 20–35-sekundowe pionowe filmy na Instagram, TikTok i Facebook: polski lektor, napisy, muzyka, Twoja oferta i dane kontaktowe. Pierwszy film z nazwą Twojej firmy przygotowuję bez żadnych opłat — ocenisz, zanim zdecydujesz.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="#kontakt">Chcę darmowy film</a>
+      <a class="btn" href="#demo">Zobacz przykłady</a>
+    </div>
+    <div class="facts">
+      <span>gotowe w 48 h</span>
+      <span>bez umowy na czas określony</span>
+      <span>bez własnych nagrań — wystarczy opis oferty</span>
+      <span>rachunek do kosztów</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEMO ============ -->
+<section id="demo">
+  <div class="wrap">
+    <span class="eyebrow">Przykłady</span>
+    <h2>Sześć branż, sześć filmów</h2>
+    <p class="muted">Każdy z tych filmów powstał dla przykładowej, wymyślonej firmy — tak samo powstanie Twój, tylko z Twoją nazwą, ofertą i kontaktem. Kliknij, żeby włączyć dźwięk.</p>
+
+    <div class="grid">
+      <!-- Pliki MP4 w folderze ../demo/ (poziom wyżej niż oferta/). Jeśli pliku brakuje, karta pokaże komunikat zamiast czarnego pola. -->
+      <figure class="card" style="margin:0">
+        <div class="frame">
+          <video src="../demo/demo-pizzeria.mp4" onerror="this.setAttribute('data-missing','1')" muted loop playsinline preload="metadata"></video>
+          <div class="fallback">Film demo pojawi się tutaj po wrzuceniu pliku <code>demo/demo-pizzeria.mp4</code></div>
+        </div>
+        <figcaption class="cap"><b>Gastronomia — pizzeria</b><small>Przykładowa firma „Da Marco”</small></figcaption>
+      </figure>
+
+      <figure class="card" style="margin:0">
+        <div class="frame">
+          <video src="../demo/demo-fryzjer.mp4" onerror="this.setAttribute('data-missing','1')" muted loop playsinline preload="metadata"></video>
+          <div class="fallback">Film demo pojawi się tutaj po wrzuceniu pliku <code>demo/demo-fryzjer.mp4</code></div>
+        </div>
+        <figcaption class="cap"><b>Beauty — salon fryzjerski</b><small>Przykładowa firma „Studio Nova”</small></figcaption>
+      </figure>
+
+      <figure class="card" style="margin:0">
+        <div class="frame">
+          <video src="../demo/demo-nieruchomosci.mp4" onerror="this.setAttribute('data-missing','1')" muted loop playsinline preload="metadata"></video>
+          <div class="fallback">Film demo pojawi się tutaj po wrzuceniu pliku <code>demo/demo-nieruchomosci.mp4</code></div>
+        </div>
+        <figcaption class="cap"><b>Nieruchomości — oferta mieszkania</b><small>Przykładowa oferta agenta</small></figcaption>
+      </figure>
+
+      <figure class="card" style="margin:0">
+        <div class="frame">
+          <video src="../demo/demo-silownia.mp4" onerror="this.setAttribute('data-missing','1')" muted loop playsinline preload="metadata"></video>
+          <div class="fallback">Film demo pojawi się tutaj po wrzuceniu pliku <code>demo/demo-silownia.mp4</code></div>
+        </div>
+        <figcaption class="cap"><b>Fitness — siłownia</b><small>Przykładowa firma „FitZone”</small></figcaption>
+      </figure>
+
+      <figure class="card" style="margin:0">
+        <div class="frame">
+          <video src="../demo/demo-detailing.mp4" onerror="this.setAttribute('data-missing','1')" muted loop playsinline preload="metadata"></video>
+          <div class="fallback">Film demo pojawi się tutaj po wrzuceniu pliku <code>demo/demo-detailing.mp4</code></div>
+        </div>
+        <figcaption class="cap"><b>Motoryzacja — detailing</b><small>Przykładowa firma „AutoGlanz”</small></figcaption>
+      </figure>
+
+      <figure class="card" style="margin:0">
+        <div class="frame">
+          <video src="../demo/demo-dentysta.mp4" onerror="this.setAttribute('data-missing','1')" muted loop playsinline preload="metadata"></video>
+          <div class="fallback">Film demo pojawi się tutaj po wrzuceniu pliku <code>demo/demo-dentysta.mp4</code></div>
+        </div>
+        <figcaption class="cap"><b>Stomatologia — gabinet</b><small>Przykładowa firma „Klinika Dentica”</small></figcaption>
+      </figure>
+    </div>
+    <p class="note">Nazwy firm w filmach są fikcyjne i służą wyłącznie pokazaniu formatu. Materiał wideo pochodzi z banków stockowych; lektor i napisy są generowane narzędziami AI, scenariusz piszę sam.</p>
+  </div>
+</section>
+
+<!-- ============ JAK TO DZIAŁA ============ -->
+<section id="jak" style="background:var(--bg-2)">
+  <div class="wrap">
+    <span class="eyebrow">Proces</span>
+    <h2>Jak to działa</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Piszesz mi, czym się zajmujesz</h3>
+        <p class="muted">Nazwa firmy, co oferujesz, dla kogo, co Cię wyróżnia, dane kontaktowe. Wystarczy kilka zdań w wiadomości — resztę dopytam.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>W 48 h dostajesz pierwszy film</h3>
+        <p class="muted">Scenariusz, lektor, napisy, muzyka i materiał wideo dopasowany do branży. Jedna runda poprawek w cenie (w darmowym filmie też).</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>Publikujesz albo ja publikuję za Ciebie</h3>
+        <p class="muted">Plik MP4 w pionie, gotowy na Instagram, TikTok i Facebook. W pakiecie Pro dodaję opisy, hashtagi i wrzucam filmy na Twoje profile.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CENNIK ============ -->
+<section id="cennik">
+  <div class="wrap">
+    <span class="eyebrow">Cennik</span>
+    <h2>Proste ceny, bez niespodzianek</h2>
+    <p class="muted">Rozliczenie miesięczne, rezygnacja w dowolnym momencie. Ceny brutto — wystawiam rachunek (działalność nierejestrowana, bez VAT).</p>
+
+    <div class="plans">
+      <div class="plan">
+        <h3>Film testowy</h3>
+        <div class="price">149 zł <small>/ 1 film</small></div>
+        <p class="muted" style="font-size:.95rem">Albo <b style="color:var(--text)">pierwszy film gratis</b> — z nazwą Twojej firmy, bez zobowiązań.</p>
+        <ul>
+          <li>1 rolka 9:16, 20–35 s</li>
+          <li>polski lektor AI + napisy</li>
+          <li>materiał stockowy</li>
+          <li>1 runda poprawek</li>
+        </ul>
+        <a class="btn" href="#kontakt">Zamów darmowy film</a>
+      </div>
+
+      <div class="plan">
+        <h3>Pakiet Start</h3>
+        <div class="price">449 zł <small>/ miesiąc</small></div>
+        <p class="muted" style="font-size:.95rem">Jeden nowy film tygodniowo. Ty publikujesz.</p>
+        <ul>
+          <li>4 rolki miesięcznie</li>
+          <li>lektor, napisy, muzyka</li>
+          <li>materiał stockowy</li>
+          <li>1 runda poprawek na film</li>
+          <li>pliki gotowe do publikacji</li>
+        </ul>
+        <a class="btn" href="#kontakt">Wybieram Start</a>
+      </div>
+
+      <div class="plan featured">
+        <span class="tag">Najczęściej wybierany</span>
+        <h3>Pakiet Pro</h3>
+        <div class="price">799 zł <small>/ miesiąc</small></div>
+        <p class="muted" style="font-size:.95rem">Dwa filmy tygodniowo i publikacja na Twoich profilach.</p>
+        <ul>
+          <li>8 rolek miesięcznie</li>
+          <li>publikacja na TikTok, Instagram i Facebook</li>
+          <li>opisy postów i hashtagi</li>
+          <li>lektor, napisy, muzyka</li>
+          <li>1 runda poprawek na film</li>
+        </ul>
+        <a class="btn primary" href="#kontakt">Wybieram Pro</a>
+      </div>
+    </div>
+
+    <div class="addon"><b>Dopłata +100 zł</b> za montaż z Twoich własnych zdjęć lub nagrań (za film). Przydatne w gastronomii, nieruchomościach i detailingu — klienci chcą zobaczyć prawdziwe wnętrze, danie albo auto.</div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" style="background:var(--bg-2)">
+  <div class="wrap">
+    <span class="eyebrow">FAQ</span>
+    <h2>Najczęstsze pytania</h2>
+
+    <details>
+      <summary>Ile to trwa?</summary>
+      <p>Pierwszy film dostajesz w ciągu 48 godzin od momentu, gdy prześlesz mi opis firmy. W pakietach filmy przychodzą regularnie: w Start — jeden tygodniowo, w Pro — dwa tygodniowo. Poprawki robię zwykle tego samego lub następnego dnia.</p>
+    </details>
+    <details>
+      <summary>Czy potrzebuję własnych zdjęć albo nagrań?</summary>
+      <p>Nie. Standardowo pracuję na materiale stockowym dobranym do branży i scenariusza. Jeśli masz własne zdjęcia lub filmy (np. wnętrze lokalu, efekty zabiegów, gotowe auto), zmontuję z nich — to dopłata 100 zł za film i zwykle lepiej konwertuje.</p>
+    </details>
+    <details>
+      <summary>Czy publikujecie filmy za mnie?</summary>
+      <p>W pakiecie Pro tak — wrzucam filmy na Twój TikTok, Instagram i Facebook razem z opisem i hashtagami, według ustalonego harmonogramu. W pakiecie Start i filmie testowym dostajesz gotowe pliki i publikujesz sam. Nie potrzebuję hasła do Twoich kont — wystarczy dostęp jako współpracownik w Meta Business lub przesłanie filmów do akceptacji.</p>
+    </details>
+    <details>
+      <summary>Jak płacę?</summary>
+      <p>Przelewem na konto, po akceptacji pierwszego filmu z pakietu; kolejne miesiące z góry. Wystawiam rachunek — prowadzę działalność nierejestrowaną, więc nie ma faktury VAT, ale rachunek możesz wrzucić w koszty. Darmowy film to naprawdę darmowy film: zero płatności, zero zobowiązań.</p>
+    </details>
+    <details>
+      <summary>Czy mogę zrezygnować?</summary>
+      <p>Tak, w każdym momencie — pakiet rozliczam co miesiąc, bez umowy na czas określony i bez okresu wypowiedzenia. Jeśli po pierwszym miesiącu uznasz, że to nie dla Ciebie, po prostu nie przedłużasz. Wszystkie filmy, które dostałeś, zostają Twoje.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ============ KONTAKT ============ -->
+<section id="kontakt" class="contact">
+  <div class="wrap">
+    <span class="eyebrow">Kontakt</span>
+    <h2>Napisz dwa zdania o swojej firmie — resztą zajmę się ja</h2>
+    <p class="muted" style="max-width:620px">Najszybciej przez Instagram albo Messenger. Odpowiadam zwykle w ciągu kilku godzin w dni robocze. Jestem z Katowic, chętnie wpadnę też osobiście.</p>
+
+    <!--
+      TODO — UZUPEŁNIJ PLACEHOLDERY KONTAKTU (zamień całe TODO_... na właściwe wartości):
+        TODO_INSTAGRAM  -> np. https://instagram.com/twoj_profil
+        TODO_MESSENGER  -> np. https://m.me/twoja_strona
+        TODO_EMAIL      -> np. twoj@adres.pl   (występuje 2x: w href mailto: i w tekście)
+        TODO_TELEFON    -> np. +48600000000 w href tel: oraz 600 000 000 w tekście (występuje 2x)
+    -->
+    <div class="contact-grid">
+      <a class="btn primary" href="TODO_INSTAGRAM" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zM17.4 5.4a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zM21.9 7.9c-.1-1.6-.4-3-1.6-4.2S17.7 2.2 16.1 2.1C14.4 2 9.6 2 7.9 2.1 6.3 2.2 4.9 2.5 3.7 3.7S2.2 6.3 2.1 7.9C2 9.6 2 14.4 2.1 16.1c.1 1.6.4 3 1.6 4.2s2.6 1.5 4.2 1.6c1.7.1 6.5.1 8.2 0 1.6-.1 3-.4 4.2-1.6s1.5-2.6 1.6-4.2c.1-1.7.1-6.5 0-8.2zm-2.2 10c-.3.9-1 1.5-1.9 1.9-1.3.5-4.4.4-5.8.4s-4.5.1-5.8-.4c-.9-.3-1.5-1-1.9-1.9-.5-1.3-.4-4.4-.4-5.8s-.1-4.5.4-5.8c.3-.9 1-1.5 1.9-1.9 1.3-.5 4.4-.4 5.8-.4s4.5-.1 5.8.4c.9.3 1.5 1 1.9 1.9.5 1.3.4 4.4.4 5.8s.1 4.5-.4 5.8z"/></svg>
+        Instagram DM
+      </a>
+      <a class="btn" href="TODO_MESSENGER" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.4 2 2 6.1 2 11.3c0 2.9 1.4 5.5 3.6 7.2V22l3.4-1.9c.9.3 1.9.4 3 .4 5.6 0 10-4.1 10-9.3S17.6 2 12 2zm1 12.5l-2.6-2.7-5 2.7 5.5-5.8 2.6 2.7 4.9-2.7-5.4 5.8z"/></svg>
+        Messenger
+      </a>
+      <a class="btn" href="mailto:TODO_EMAIL">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        E-mail<br><small style="font-weight:400;color:var(--muted)">TODO_EMAIL</small>
+      </a>
+      <a class="btn" href="tel:TODO_TELEFON">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+        Telefon<br><small style="font-weight:400;color:var(--muted)">TODO_TELEFON</small>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Mateusz · Katowice · krótkie filmy reklamowe dla lokalnych firm. Działalność nierejestrowana — wystawiam rachunek. Nazwy firm w filmach demo są fikcyjne.</p>
+    <p><a href="cennik.pdf">Cennik w PDF</a></p>
+  </div>
+</footer>
+
+<script>
+  // Autoodtwarzanie bez dźwięku, gdy karta jest widoczna; klik włącza/wyłącza dźwięk.
+  // Jeśli plik MP4 nie istnieje, pokazujemy komunikat zamiast czarnego pola.
+  (function(){
+    var videos = document.querySelectorAll('.card video');
+    videos.forEach(function(v){
+      v.addEventListener('error', function(){ v.setAttribute('data-missing','1'); });
+      v.addEventListener('click', function(){
+        if (v.muted){ v.muted = false; v.play(); } else { v.muted = true; }
+      });
+    });
+    if ('IntersectionObserver' in window){
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          var v = e.target;
+          if (v.hasAttribute('data-missing')) return;
+          if (e.isIntersecting){ v.play().catch(function(){}); } else { v.pause(); }
+        });
+      }, {threshold:.5});
+      videos.forEach(function(v){ io.observe(v); });
+    }
+  })();
+</script>
+</body>
+</html>

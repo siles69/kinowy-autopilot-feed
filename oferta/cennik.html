@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cennik — rolki reklamowe dla firm, Katowice</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+  @page{size:A4;margin:0}
+  :root{--bg:#0f0f12;--bg-2:#17171c;--line:#2b2b35;--text:#f2f1ec;--muted:#a7a6a0;--amber:#f5a524;--amber-ink:#1a1200}
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .page{width:210mm;min-height:297mm;margin:0 auto;padding:16mm 16mm 12mm;display:flex;flex-direction:column;background:var(--bg)}
+  .eyebrow{color:var(--amber);font-weight:600;font-size:9pt;letter-spacing:.1em;text-transform:uppercase}
+  h1{font-size:24pt;font-weight:800;margin:4px 0 6px;line-height:1.15;letter-spacing:-.01em}
+  p{margin:0 0 .6em;line-height:1.5}
+  .lead{color:var(--muted);font-size:10.5pt;max-width:150mm}
+  .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm;margin-top:8mm}
+  .plan{background:var(--bg-2);border:1px solid var(--line);border-radius:4mm;padding:5mm;position:relative;display:flex;flex-direction:column}
+  .plan.featured{border-color:var(--amber);box-shadow:0 0 0 1px var(--amber) inset}
+  .tag{position:absolute;top:-3.5mm;left:5mm;background:var(--amber);color:var(--amber-ink);font-size:7pt;font-weight:700;padding:1mm 2.5mm;border-radius:99px;letter-spacing:.05em;text-transform:uppercase}
+  h3{margin:0 0 1mm;font-size:11.5pt;font-weight:600}
+  .price{font-size:19pt;font-weight:800;margin:1mm 0}
+  .price small{font-size:9pt;font-weight:500;color:var(--muted)}
+  .sub{color:var(--muted);font-size:9pt;min-height:9mm}
+  ul{list-style:none;padding:0;margin:3mm 0 0;font-size:9pt;color:#d8d7d0}
+  li{padding:1.6mm 0;border-top:1px solid var(--line)}
+  li::before{content:"—";color:var(--amber);margin-right:2mm}
+  .addon{margin-top:5mm;background:var(--bg-2);border:1px dashed var(--line);border-radius:3mm;padding:4mm 5mm;color:var(--muted);font-size:9.5pt}
+  .addon b{color:var(--text)}
+  .how{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm;margin-top:7mm}
+  .how div{font-size:9pt;color:#d8d7d0}
+  .how b{display:block;color:var(--text);font-size:10pt;margin-bottom:1mm}
+  .how .n{display:inline-flex;width:6mm;height:6mm;border-radius:50%;background:var(--amber);color:var(--amber-ink);font-weight:800;align-items:center;justify-content:center;font-size:9pt;margin-bottom:2mm}
+  .spacer{flex:1}
+  .contact{border-top:1px solid var(--line);padding-top:5mm;display:flex;justify-content:space-between;gap:6mm;font-size:9.5pt}
+  .contact .muted{color:var(--muted);font-size:8.5pt}
+  .contact a{color:var(--amber);text-decoration:none}
+  .fine{color:var(--muted);font-size:7.5pt;margin-top:4mm;line-height:1.4}
+</style>
+</head>
+<body>
+<div class="page">
+  <span class="eyebrow">Cennik · krótkie filmy reklamowe 9:16 · Katowice</span>
+  <h1>Rolki reklamowe dla Twojej firmy — pierwsza za darmo</h1>
+  <p class="lead">Pionowe filmy 20–35 s na Instagram, TikTok i Facebook: polski lektor, napisy, muzyka, Twoja oferta i kontakt. Pierwszy film z nazwą Twojej firmy przygotowuję bezpłatnie, w 48 godzin.</p>
+
+  <div class="plans">
+    <div class="plan">
+      <h3>Film testowy</h3>
+      <div class="price">149 zł <small>/ 1 film</small></div>
+      <p class="sub">albo <b style="color:var(--text)">pierwszy film gratis</b> — z nazwą Twojej firmy, bez zobowiązań</p>
+      <ul>
+        <li>1 rolka 9:16, 20–35 s</li>
+        <li>polski lektor AI + napisy</li>
+        <li>materiał stockowy</li>
+        <li>1 runda poprawek</li>
+      </ul>
+    </div>
+    <div class="plan">
+      <h3>Pakiet Start</h3>
+      <div class="price">449 zł <small>/ miesiąc</small></div>
+      <p class="sub">jeden nowy film tygodniowo, publikujesz sam</p>
+      <ul>
+        <li>4 rolki miesięcznie</li>
+        <li>lektor, napisy, muzyka</li>
+        <li>materiał stockowy</li>
+        <li>1 runda poprawek na film</li>
+        <li>pliki gotowe do publikacji</li>
+      </ul>
+    </div>
+    <div class="plan featured">
+      <span class="tag">Najczęściej wybierany</span>
+      <h3>Pakiet Pro</h3>
+      <div class="price">799 zł <small>/ miesiąc</small></div>
+      <p class="sub">dwa filmy tygodniowo i publikacja na Twoich profilach</p>
+      <ul>
+        <li>8 rolek miesięcznie</li>
+        <li>publikacja: TikTok, Instagram, Facebook</li>
+        <li>opisy postów i hashtagi</li>
+        <li>lektor, napisy, muzyka</li>
+        <li>1 runda poprawek na film</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="addon"><b>Dopłata +100 zł / film</b> za montaż z Twoich własnych zdjęć lub nagrań (wnętrze, efekty zabiegów, dania, auta). Zwykle działa lepiej niż materiał stockowy.</div>
+
+  <div class="how">
+    <div><span class="n">1</span><b>Opisujesz firmę</b>Nazwa, oferta, dla kogo, co Cię wyróżnia, kontakt — kilka zdań w wiadomości.</div>
+    <div><span class="n">2</span><b>W 48 h masz film</b>Scenariusz, lektor, napisy, muzyka. Jedna runda poprawek w cenie.</div>
+    <div><span class="n">3</span><b>Publikacja</b>Ty — albo ja za Ciebie (Pro), razem z opisami i hashtagami.</div>
+  </div>
+
+  <div class="spacer"></div>
+
+  <!-- TODO: uzupełnij dane kontaktowe (TODO_INSTAGRAM, TODO_EMAIL, TODO_TELEFON) -->
+  <div class="contact">
+    <div>
+      <b>Mateusz · Katowice</b><br>
+      <span class="muted">Instagram: <a href="TODO_INSTAGRAM">TODO_INSTAGRAM</a><br>
+      e-mail: TODO_EMAIL · tel. TODO_TELEFON</span>
+    </div>
+    <div style="text-align:right">
+      <span class="muted">portfolio i demo:</span><br>
+      <a href="https://siles69.github.io/kinowy-autopilot-feed/oferta/">siles69.github.io/kinowy-autopilot-feed/oferta/</a>
+    </div>
+  </div>
+  <p class="fine">Ceny brutto. Rozliczenie miesięczne, rezygnacja w dowolnym momencie, bez umowy na czas określony. Wystawiam rachunek (działalność nierejestrowana, bez VAT). Materiał wideo z banków stockowych; lektor i napisy generowane narzędziami AI. Nazwy firm w filmach demo są fikcyjne.</p>
+</div>
+</body>
+</html>
