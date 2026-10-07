@@ -11,7 +11,9 @@ Pliki w tym folderze:
 | `cennik.html` / `cennik.pdf` | cennik jednostronicowy — PDF do wysyłania klientom |
 | `wiadomosci.md` | szablony DM / Messenger / e-mail, obiekcje, follow-up, oferta po darmowym filmie |
 | `ogloszenia.md` | teksty na Useme, OLX, Fixly, grupy FB, bio IG i FB |
-| `leady.csv` | lista 20 firm z Katowic do kontaktu |
+| `leady.csv` | lista 30 firm z Katowic do kontaktu (kolumna `email` — automat odpowiedzi działa po mailu) |
+| `dzien1.md` | 8 gotowych, spersonalizowanych wiadomości na pierwszy dzień (priorytet 1) |
+| `instagram-posty.md` | opisy i hashtagi do 6 rolek demo, bio i przypięty post dla @matilemek |
 | `regulamin.html`, `polityka-prywatnosci.html`, `dostepnosc.html` | strony prawne i deklaracja dostępności (wersje robocze do weryfikacji) |
 | `fonts/` | czcionka Inter hostowana lokalnie (licencja OFL w `fonts/LICENSE.txt`) |
 | `ZALOZENIA.md` | założenia, które przyjąłem przy tworzeniu plików |
@@ -20,7 +22,7 @@ Pliki w tym folderze:
 
 ## Dzienny rytuał (ok. 90 minut)
 
-1. **Zbuduj listę na dziś (15 min).** Otwórz `leady.csv`. Wybierz 20 firm ze statusem pustym — zaczynaj od priorytetu 1. Gdy lista się kończy, dopisz nowe firmy: Google Maps → fraza branżowa + „Katowice” → filtruj 4,5+ → otwórz profil IG/FB → jeśli nie ma rolek z ostatnich 2 miesięcy, to lead. Min. 2 nowe branże dziennie, żeby nie wypalić jednej.
+1. **Zbuduj listę na dziś (15 min).** Dzień 1: wyślij osiem wiadomości z `dzien1.md`. Potem otwórz `leady.csv`. Wybierz 20 firm ze statusem pustym — zaczynaj od priorytetu 1. Gdy lista się kończy, dopisz nowe firmy: Google Maps → fraza branżowa + „Katowice” → filtruj 4,5+ → otwórz profil IG/FB → jeśli nie ma rolek z ostatnich 2 miesięcy, to lead. Min. 2 nowe branże dziennie, żeby nie wypalić jednej.
 
 2. **Wyślij 20 wiadomości (45 min).** Dla każdej firmy: 2 minuty na profil, jedno spersonalizowane zdanie (to, co kuleje), szablon z `wiadomosci.md`. Kanał: IG DM jeśli profil żyje, Messenger jeśli FB jest głównym kanałem, e-mail do gabinetów i biur (tam częściej czyta właściciel). Po wysłaniu wpisz w kolumnę `status`: `wysłano DD.MM kanał` (np. `wysłano 07.10 IG`).
 
