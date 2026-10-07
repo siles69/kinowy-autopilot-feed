@@ -103,6 +103,8 @@ def shell(meta_lines, ld_obj, body, css="style.css", nav_prefix="", extra_head="
           <a href="{nav_prefix}./#jak">Jak to działa</a>
           <a href="{nav_prefix}./#faq">FAQ</a>
           <a href="{nav_prefix}cennik.html">Cennik</a>
+          <a href="{nav_prefix}branze/">Branże</a>
+          <a href="{nav_prefix}dla-agencji.html">Dla agencji</a>
           <a href="{nav_prefix}cennik.pdf">Cennik PDF</a>
           <a href="{nav_prefix}regulamin.html">Regulamin</a>
           <a href="{nav_prefix}polityka-prywatnosci.html">Polityka prywatności</a>
@@ -200,7 +202,7 @@ def build_index():
   <div class="wrap">
     <span class="label">Dla kogo</span>
     <div class="chips">
-      <span class="chip">stomatologia</span><span class="chip">medycyna estetyczna</span><span class="chip">beauty i fryzjerzy</span><span class="chip">siłownie i trenerzy</span><span class="chip">nieruchomości</span><span class="chip">detailing i warsztaty</span><span class="chip">gastronomia</span><span class="chip">szkoły jazdy</span><span class="chip">fotowoltaika i OZE</span><span class="chip">biura rachunkowe</span>
+      <a class="chip" href="branze/stomatologia.html">stomatologia</a><a class="chip" href="branze/medycyna-estetyczna.html">medycyna estetyczna</a><a class="chip" href="branze/salony-fryzjerskie-beauty.html">beauty i fryzjerzy</a><a class="chip" href="branze/silownie-trenerzy.html">siłownie i trenerzy</a><a class="chip" href="branze/nieruchomosci.html">nieruchomości</a><a class="chip" href="branze/detailing-warsztaty.html">detailing i warsztaty</a><a class="chip" href="branze/gastronomia.html">gastronomia</a><a class="chip" href="branze/szkoly-jazdy.html">szkoły jazdy</a><a class="chip" href="branze/fotowoltaika-pompy-ciepla.html">fotowoltaika i OZE</a><a class="chip" href="branze/biura-rachunkowe-kancelarie.html">biura rachunkowe</a><a class="chip" href="dla-agencji.html">dla agencji</a>
     </div>
   </div>
 </section>

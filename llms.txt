@@ -29,6 +29,8 @@ Nazywam się Mateusz, pracuję samodzielnie z Katowic (nie jestem agencją). Rob
 - [Strona oferty z filmami demo](https://siles69.github.io/kinowy-autopilot-feed/oferta/)
 - [Cennik](https://siles69.github.io/kinowy-autopilot-feed/oferta/cennik.html)
 - [Cennik PDF](https://siles69.github.io/kinowy-autopilot-feed/oferta/cennik.pdf)
+- [Branże — strony dla 9 branż](https://siles69.github.io/kinowy-autopilot-feed/oferta/branze/)
+- [Dla agencji — white-label od 99 zł/film](https://siles69.github.io/kinowy-autopilot-feed/oferta/dla-agencji.html)
 - [Regulamin](https://siles69.github.io/kinowy-autopilot-feed/oferta/regulamin.html)
 - [Polityka prywatności](https://siles69.github.io/kinowy-autopilot-feed/oferta/polityka-prywatnosci.html)
 - [Deklaracja dostępności](https://siles69.github.io/kinowy-autopilot-feed/oferta/dostepnosc.html)

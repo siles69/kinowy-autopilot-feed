@@ -182,7 +182,10 @@ section+section{border-top:1px solid var(--line)}
 .chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:12px 0;-webkit-overflow-scrolling:touch;}
 @media(max-width:1100px){.chips{-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 56px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 56px),transparent)}}
 .chips::-webkit-scrollbar{display:none}
-.chip{flex:none;font-size:14px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:7px 14px;white-space:nowrap}
+.chip{flex:none;font-size:14px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:7px 14px;white-space:nowrap;text-decoration:none;transition:border-color .2s var(--ease),color .2s var(--ease)}
+a.chip:hover{color:var(--text);border-color:var(--accent)}
+.branze-lista a{display:block;text-decoration:none;color:var(--text)}
+.branze-lista a:hover .serif{color:var(--accent)}
 
 /* --- Demo --------------------------------------------------- */
 .demo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,2.5vw,36px)}
@@ -605,7 +608,7 @@ section+section{border-top:1px solid var(--line)}
   <div class="wrap">
     <span class="label">Dla kogo</span>
     <div class="chips">
-      <span class="chip">stomatologia</span><span class="chip">medycyna estetyczna</span><span class="chip">beauty i fryzjerzy</span><span class="chip">siłownie i trenerzy</span><span class="chip">nieruchomości</span><span class="chip">detailing i warsztaty</span><span class="chip">gastronomia</span><span class="chip">szkoły jazdy</span><span class="chip">fotowoltaika i OZE</span><span class="chip">biura rachunkowe</span>
+      <a class="chip" href="branze/stomatologia.html">stomatologia</a><a class="chip" href="branze/medycyna-estetyczna.html">medycyna estetyczna</a><a class="chip" href="branze/salony-fryzjerskie-beauty.html">beauty i fryzjerzy</a><a class="chip" href="branze/silownie-trenerzy.html">siłownie i trenerzy</a><a class="chip" href="branze/nieruchomosci.html">nieruchomości</a><a class="chip" href="branze/detailing-warsztaty.html">detailing i warsztaty</a><a class="chip" href="branze/gastronomia.html">gastronomia</a><a class="chip" href="branze/szkoly-jazdy.html">szkoły jazdy</a><a class="chip" href="branze/fotowoltaika-pompy-ciepla.html">fotowoltaika i OZE</a><a class="chip" href="branze/biura-rachunkowe-kancelarie.html">biura rachunkowe</a><a class="chip" href="dla-agencji.html">dla agencji</a>
     </div>
   </div>
 </section>
@@ -913,6 +916,8 @@ section+section{border-top:1px solid var(--line)}
           <a href="./#jak">Jak to działa</a>
           <a href="./#faq">FAQ</a>
           <a href="cennik.html">Cennik</a>
+          <a href="branze/">Branże</a>
+          <a href="dla-agencji.html">Dla agencji</a>
           <a href="cennik.pdf">Cennik PDF</a>
           <a href="regulamin.html">Regulamin</a>
           <a href="polityka-prywatnosci.html">Polityka prywatności</a>
