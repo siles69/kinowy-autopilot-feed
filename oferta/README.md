@@ -41,23 +41,9 @@ Pliki w tym folderze:
 
 ---
 
-## Placeholdery `TODO_*` do uzupełnienia
+## Dane kontaktowe
 
-Zamień wszystkie wystąpienia (wyszukaj w folderze `oferta/` frazę `TODO_`):
-
-| Placeholder | Gdzie | Na co zamienić |
-|---|---|---|
-| `TODO_INSTAGRAM` | `index.html` (href przycisku), `cennik.html`, `ogloszenia.md` | pełny URL profilu, np. `https://instagram.com/twoj_profil` |
-| `TODO_MESSENGER` | `index.html` (href przycisku) | link m.me, np. `https://m.me/nazwa_strony` |
-| `TODO_EMAIL` | `index.html` (2×: `mailto:` i tekst), `cennik.html`, `wiadomosci.md`, `ogloszenia.md` | adres e-mail |
-| `TODO_TELEFON` | `index.html` (2×: `tel:` i tekst), `cennik.html`, `wiadomosci.md`, `ogloszenia.md` | w `href="tel:"` format `+48600000000`, w tekście `600 000 000` |
-
-Po zamianie w `cennik.html` wygeneruj PDF ponownie (patrz niżej).
-
-Szybka zamiana z terminala (Linux/macOS), z katalogu `oferta/`:
-```bash
-sed -i 's#TODO_INSTAGRAM#https://instagram.com/TWOJ_PROFIL#g; s#TODO_MESSENGER#https://m.me/TWOJA_STRONA#g; s#TODO_EMAIL#twoj@email.pl#g; s#tel:TODO_TELEFON#tel:+48600000000#g; s#TODO_TELEFON#600 000 000#g' index.html cennik.html wiadomosci.md ogloszenia.md
-```
+Uzupełnione we wszystkich plikach: Instagram `instagram.com/matilemek`, Messenger `m.me/MateuszLemek`, e-mail `odpowiedzi.opinie@gmail.com`, tel. `797 224 220`. Jeśli coś się zmieni, wyszukaj starą wartość w folderze `oferta/` i podmień, a potem wygeneruj PDF ponownie (sekcja niżej).
 
 ---
 

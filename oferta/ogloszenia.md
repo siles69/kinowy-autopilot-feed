@@ -3,7 +3,7 @@
 Link do portfolio: https://siles69.github.io/kinowy-autopilot-feed/oferta/
 Cennik PDF: https://siles69.github.io/kinowy-autopilot-feed/oferta/cennik.pdf
 
-Przed publikacją zamień `TODO_TELEFON`, `TODO_EMAIL`, `TODO_INSTAGRAM` na swoje dane. Nie zmieniaj cen bez aktualizacji strony.
+Przed publikacją zamień `797 224 220`, `odpowiedzi.opinie@gmail.com`, `https://www.instagram.com/matilemek/` na swoje dane. Nie zmieniaj cen bez aktualizacji strony.
 
 ---
 
@@ -62,7 +62,7 @@ Dla kogo: gabinety stomatologiczne i medycyny estetycznej, salony fryzjerskie i 
 Termin: 48 godzin. Bez umowy, rezygnacja w każdym momencie, rachunek do kosztów.
 
 Przykłady: siles69.github.io/kinowy-autopilot-feed/oferta/
-Napisz lub zadzwoń: TODO_TELEFON
+Napisz lub zadzwoń: 797 224 220
 
 ---
 
@@ -158,4 +158,4 @@ Pierwszy film robię za darmo, żebyś mógł ocenić bez ryzyka. Potem:
 Bez umowy terminowej, rozliczenie co miesiąc, rachunek do kosztów. Pracuję sam — rozmawiasz bezpośrednio z osobą, która robi Twój film.
 
 Przykłady: https://siles69.github.io/kinowy-autopilot-feed/oferta/
-Kontakt: Messenger, TODO_EMAIL, TODO_TELEFON
+Kontakt: Messenger, odpowiedzi.opinie@gmail.com, 797 224 220

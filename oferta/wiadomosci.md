@@ -79,7 +79,7 @@ Zasady użycia:
 >
 > Pozdrawiam
 > Mateusz
-> TODO_TELEFON · TODO_EMAIL
+> 797 224 220 · odpowiedzi.opinie@gmail.com
 
 ### Wariant B — krótki, do „kontakt@”
 **Temat:** Film 30 s o [Firma] — zrobię za darmo
@@ -96,7 +96,7 @@ Zasady użycia:
 > Do kogo najlepiej skierować tę propozycję?
 >
 > Pozdrawiam
-> Mateusz, TODO_TELEFON
+> Mateusz, 797 224 220
 
 ### Wariant C — z konkretnym pomysłem na scenariusz
 **Temat:** Pomysł na rolkę dla [Firma] (gotowy scenariusz w środku)
@@ -117,7 +117,7 @@ Zasady użycia:
 >
 > Pozdrawiam
 > Mateusz
-> TODO_TELEFON · TODO_EMAIL
+> 797 224 220 · odpowiedzi.opinie@gmail.com
 
 ---
 
