@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- 2026-10-07 — wersja robocza do weryfikacji przez prawnika. Dokument przygotowany na podstawie ogólnie dostępnych wymogów RODO / ustawy o prawach konsumenta; nie stanowi porady prawnej. -->
+<!-- 2026-10-07 — wersja robocza do weryfikacji przez prawnika. Nie stanowi porady prawnej. -->
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
@@ -27,52 +27,7 @@
 <meta name="twitter:title" content="Regulamin usług — rolki reklamowe Katowice">
 <meta name="twitter:description" content="Zasady zamawiania filmów reklamowych: ceny końcowe w PLN, płatność z góry, 48 h realizacji, jedna runda poprawek, licencja, odstąpienie 14 dni, reklamacje.">
 <meta name="twitter:image" content="https://siles69.github.io/kinowy-autopilot-feed/oferta/og.png">
-<style>
-@font-face{font-family:Inter;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/inter-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:Inter;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/inter-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:Inter;font-style:normal;font-weight:500;font-display:swap;src:url(fonts/inter-latin-ext-500-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:Inter;font-style:normal;font-weight:500;font-display:swap;src:url(fonts/inter-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:Inter;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/inter-latin-ext-600-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:Inter;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/inter-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:Inter;font-style:normal;font-weight:800;font-display:swap;src:url(fonts/inter-latin-ext-800-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:Inter;font-style:normal;font-weight:800;font-display:swap;src:url(fonts/inter-latin-800-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-:root{--bg:#0f0f12;--bg-2:#17171c;--line:#2b2b35;--text:#f2f1ec;--muted:#a7a6a0;--amber:#f5a524;--amber-2:#ffc45c;--amber-ink:#1a1200}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
-a{color:var(--amber)}
-a:focus-visible{outline:3px solid var(--amber-2);outline-offset:3px;border-radius:4px}
-.wrap{max-width:820px;margin:0 auto;padding:0 16px}
-header.top{position:sticky;top:0;z-index:10;background:rgba(15,15,18,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
-.brand{font-weight:800;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:8px}
-.brand .dot{width:10px;height:10px;border-radius:50%;background:var(--amber)}
-header nav a{color:var(--muted);text-decoration:none;font-size:.95rem;margin-left:18px}
-header nav a:hover{color:var(--text)}
-.skip{position:absolute;left:-999px;top:8px;background:var(--amber);color:var(--amber-ink);padding:10px 14px;border-radius:8px;font-weight:600;z-index:100}
-.skip:focus{left:16px}
-.crumbs{font-size:.9rem;color:var(--muted);margin:28px 0 8px;display:flex;gap:8px;align-items:center}
-.crumbs a{color:var(--text);text-decoration:none}
-.crumbs .sep{color:var(--amber)}
-main{padding:0 0 56px}
-h1{font-size:clamp(1.7rem,5vw,2.4rem);line-height:1.15;margin:0 0 8px;letter-spacing:-.01em}
-h2{font-size:1.25rem;margin:36px 0 10px;padding-top:8px;border-top:1px solid var(--line)}
-h3{font-size:1.05rem;margin:22px 0 8px}
-p,li{color:#d8d7d0}
-.meta{color:var(--muted);font-size:.9rem;margin-bottom:24px}
-.box{background:var(--bg-2);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:18px 0}
-.box.warn{border-color:var(--amber)}
-ol,ul{padding-left:22px}
-li{margin:6px 0}
-dl{display:grid;grid-template-columns:max-content 1fr;gap:6px 16px}
-dt{color:var(--muted)}
-dd{margin:0}
-@media(max-width:560px){dl{grid-template-columns:1fr}dt{margin-top:8px}}
-footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:.85rem}
-footer nav a{color:var(--text);margin-right:16px;text-decoration:none}
-footer nav a:hover{color:var(--amber)}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style>
+<link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -112,28 +67,38 @@ footer nav a:hover{color:var(--amber)}
 </head>
 <body>
 <a class="skip" href="#main">Przejdź do treści</a>
-<header class="top">
+<header class="nav">
   <div class="wrap">
-    <a class="brand" href="./"><span class="dot"></span>Rolki dla firm · Katowice</a>
-    <nav><a href="./">Oferta</a><a href="cennik.html">Cennik</a><a href="./#kontakt">Kontakt</a></nav>
+    <a class="brand" href="./">Mateusz <span>· rolki reklamowe</span></a>
+    <nav aria-label="Główna">
+      <a href="./#demo">Przykłady</a>
+      <a href="./#jak">Jak to działa</a>
+      <a class="keep" href="cennik.html">Cennik</a>
+      <a href="./#faq">FAQ</a>
+      <a class="btn primary" href="./#kontakt">Pierwszy film gratis</a>
+    </nav>
   </div>
 </header>
-<main id="main">
+<main id="main" class="page">
   <div class="wrap">
     <nav class="crumbs" aria-label="Okruszki"><a href="./">Oferta</a><span class="sep" aria-hidden="true">›</span><span aria-current="page">Regulamin</span></nav>
-    <h1>Regulamin świadczenia usług</h1>
-    <p class="meta">Wersja z dnia 2026-10-07. Usługodawca: Mateusz Lekem, Katowice.</p>
+    <div class="doc-head">
+      <h1>Regulamin świadczenia usług</h1>
+      <p class="meta">Wersja z 7 października 2026 r.<br>Usługodawca: Mateusz Lekem, Katowice.</p>
+    </div>
+    <div class="doc-layout">
+      <article class="doc">
 
     <div class="box">Krótko: opisujesz firmę, ja robię film. Pierwszy film jest darmowy i do niczego nie zobowiązuje. Płatne zamówienia potwierdzamy mailem, płacisz z góry przelewem, film masz w 48 h, jedna runda poprawek w cenie. Film możesz używać w swoich kanałach bez ograniczeń czasowych. Szczegóły poniżej.</div>
 
-    <h2>§ 1. Kto świadczy usługę</h2>
+    <h2 id="s-1-kto-swiadczy-usluge">§ 1. Kto świadczy usługę</h2>
     <ol>
-      <li>Usługi opisane w tym regulaminie świadczy <strong>Mateusz Lekem</strong>, Katowice, e-mail: <a href="mailto:mateuszlekem@gmail.com">mateuszlekem@gmail.com</a>, tel. 797 224 220 (dalej „Usługodawca” lub „ja”).</li>
+      <li>Usługi opisane w tym regulaminie świadczy <strong>Mateusz Lekem</strong>, Katowice, e-mail: <a href="mailto:mateuszlekem@gmail.com">mateuszlekem@gmail.com</a>, tel. 797&nbsp;224&nbsp;220 (dalej „Usługodawca” lub „ja”).</li>
       <li>Prowadzę <strong>działalność nierejestrowaną</strong> w rozumieniu art. 5 ustawy z dnia 6 marca 2018 r. — Prawo przedsiębiorców. Oznacza to, że nie jestem wpisany do CEIDG, nie mam NIP firmowego ani numeru REGON, a moje miesięczne przychody nie przekraczają ustawowego limitu. Nie jestem płatnikiem VAT.</li>
-      <li>Regulamin obowiązuje od 7 października 2026 r.. Aktualna wersja jest dostępna pod adresem <a href="regulamin.html">https://siles69.github.io/kinowy-autopilot-feed/oferta/regulamin.html</a> i wysyłam ją w wiadomości z wyceną, zanim cokolwiek zapłacisz.</li>
+      <li>Regulamin obowiązuje od 7 października 2026 r. Aktualna wersja jest dostępna pod adresem <a href="regulamin.html">https://siles69.github.io/kinowy-autopilot-feed/oferta/regulamin.html</a> i wysyłam ją w wiadomości z wyceną, zanim cokolwiek zapłacisz.</li>
     </ol>
 
-    <h2>§ 2. Na czym polega usługa</h2>
+    <h2 id="s-2-na-czym-polega-usluga">§ 2. Na czym polega usługa</h2>
     <ol>
       <li>Produkuję krótkie pionowe filmy reklamowe (format 9:16, długość 20–35 sekund) przeznaczone do publikacji w mediach społecznościowych (Instagram, TikTok, Facebook) — na podstawie opisu firmy, oferty i materiałów, które mi przekażesz.</li>
       <li>Film zawiera: scenariusz napisany przeze mnie, lektora w języku polskim wygenerowanego narzędziem AI, napisy, muzykę oraz materiał wideo z licencjonowanych bibliotek stockowych albo z Twoich zdjęć i nagrań (za dopłatą). Gotowy film dostarczam jako plik MP4.</li>
@@ -141,7 +106,7 @@ footer nav a:hover{color:var(--amber)}
       <li>Usługa obejmuje produkcję i ewentualną publikację filmów. <strong>Nie obejmuje</strong> prowadzenia płatnych kampanii reklamowych, odpowiadania na komentarze ani obsługi Twoich klientów. Nie gwarantuję określonej liczby wyświetleń, obserwujących, zapytań ani sprzedaży — wyniki zależą od wielu czynników, na które nie mam wpływu.</li>
     </ol>
 
-    <h2>§ 3. Ceny</h2>
+    <h2 id="s-3-ceny">§ 3. Ceny</h2>
     <ol>
       <li>Ceny są podane w złotych polskich (PLN) i są cenami końcowymi — nie doliczam VAT, bo nie jestem jego płatnikiem.</li>
       <li>Aktualny cennik: film testowy — 149 zł; Pakiet Start (4 filmy w miesiącu) — 449 zł; Pakiet Pro (8 filmów w miesiącu z publikacją, opisami i hashtagami) — 799 zł; montaż z materiałów własnych klienta — dopłata 100 zł za film. Cennik jest dostępny pod adresem <a href="cennik.html">https://siles69.github.io/kinowy-autopilot-feed/oferta/cennik.html</a>.</li>
@@ -149,7 +114,7 @@ footer nav a:hover{color:var(--amber)}
       <li>Cena pakietu obejmuje jeden miesiąc kalendarzowy liczony od dnia zaksięgowania płatności.</li>
     </ol>
 
-    <h2>§ 4. Jak złożyć zamówienie</h2>
+    <h2 id="s-4-jak-zlozyc-zamowienie">§ 4. Jak złożyć zamówienie</h2>
     <ol>
       <li>Piszesz do mnie (e-mail, Instagram, Messenger lub telefon) i opisujesz firmę oraz to, co chcesz promować.</li>
       <li>Odsyłam wycenę e-mailem: zakres (pakiet lub pojedynczy film), cenę końcową, termin, link do tego regulaminu i polityki prywatności oraz numer rachunku do przelewu.</li>
@@ -157,14 +122,14 @@ footer nav a:hover{color:var(--amber)}
       <li>Zastrzegam sobie prawo do odmowy przyjęcia zamówienia, jeśli treść filmu miałaby naruszać prawo lub dobre obyczaje (§ 8), albo jeśli nie mam wolnych terminów — informuję o tym przed płatnością.</li>
     </ol>
 
-    <h2>§ 5. Płatność</h2>
+    <h2 id="s-5-platnosc">§ 5. Płatność</h2>
     <ol>
       <li>Płatność za pakiet lub film testowy następuje <strong>z góry, przelewem bankowym</strong> na numer rachunku podany w wycenie, w terminie 3 dni od akceptacji wyceny. Produkcję zaczynam po zaksięgowaniu wpłaty.</li>
       <li>Po otrzymaniu płatności wystawiam <strong>rachunek</strong> (nie fakturę VAT) — osoba prowadząca działalność nierejestrowaną nie jest podatnikiem VAT, a rachunek jest dokumentem, który możesz ująć w kosztach swojej firmy. Rachunek wysyłam e-mailem w formie PDF.</li>
       <li>Kolejne miesiące pakietu są płatne z góry na tych samych zasadach. Brak wpłaty oznacza po prostu, że pakiet nie jest przedłużany — nie naliczam żadnych opłat za rezygnację.</li>
     </ol>
 
-    <h2>§ 6. Termin, poprawki, odbiór</h2>
+    <h2 id="s-6-termin-poprawki-odbior">§ 6. Termin, poprawki, odbiór</h2>
     <ol>
       <li>Pierwszy film dostarczam w ciągu <strong>48 godzin</strong> (dni robocze) od momentu, w którym otrzymam komplet informacji: nazwę i opis firmy, co ma być promowane, dane kontaktowe do filmu i — jeśli dotyczy — Twoje materiały. Jeśli czegoś brakuje, dopytuję, a termin liczy się od uzupełnienia.</li>
       <li>W pakietach kolejne filmy dostarczam według harmonogramu: Start — 1 film tygodniowo, Pro — 2 filmy tygodniowo.</li>
@@ -172,7 +137,7 @@ footer nav a:hover{color:var(--amber)}
       <li>Film uznaję za odebrany, gdy potwierdzisz, że jest w porządku, albo gdy w ciągu 7 dni od wysłania nie zgłosisz uwag. Filmy niewykorzystane w danym miesiącu pakietu nie przechodzą na kolejny miesiąc, chyba że ustalimy inaczej.</li>
     </ol>
 
-    <h2>§ 7. Prawa do filmu (licencja)</h2>
+    <h2 id="s-7-prawa-do-filmu-licencja">§ 7. Prawa do filmu (licencja)</h2>
     <ol>
       <li>Po zapłacie (a w przypadku filmu bezpłatnego — po jego dostarczeniu) otrzymujesz <strong>niewyłączne, bezterminowe prawo do korzystania z filmu</strong> w swoich kanałach marketingowych: na profilach społecznościowych, stronie www, w reklamach internetowych, na ekranach w lokalu i w prezentacjach. Możesz go skracać i opatrywać własnymi opisami.</li>
       <li>Licencja nie obejmuje odsprzedaży filmu, udzielania sublicencji innym firmom ani wykorzystania w sposób, który narusza prawo lub prawa osób trzecich.</li>
@@ -180,7 +145,7 @@ footer nav a:hover{color:var(--amber)}
       <li>Scenariusz i montaż są moim dziełem; nie zgłaszam roszczeń z tytułu autorstwa wobec Twojego korzystania z filmu w zakresie licencji. Mogę pokazywać gotowy film jako przykład mojej pracy (np. na tej stronie), chyba że poprosisz, żebym tego nie robił — wtedy nie będę.</li>
     </ol>
 
-    <h2>§ 8. Za co odpowiadasz Ty</h2>
+    <h2 id="s-8-za-co-odpowiadasz-ty">§ 8. Za co odpowiadasz Ty</h2>
     <ol>
       <li>Za <strong>materiały, które sam dostarczasz</strong> (zdjęcia, nagrania, logo, teksty): oświadczasz, że masz do nich prawa i zgody osób, które na nich widać.</li>
       <li>Za <strong>zgodność treści filmu z prawem</strong> dotyczącym Twojej branży — w szczególności za ograniczenia reklamy usług medycznych i stomatologicznych, wyrobów medycznych, alkoholu, usług finansowych, suplementów i gier. Jeśli mam wątpliwości, zwrócę na nie uwagę, ale nie świadczę porad prawnych i ostateczna decyzja o publikacji jest Twoja.</li>
@@ -188,7 +153,7 @@ footer nav a:hover{color:var(--amber)}
       <li>Jeśli z powodu naruszenia powyższych punktów ktoś zgłosi roszczenie wobec mnie, pokryjesz uzasadnione koszty z tym związane.</li>
     </ol>
 
-    <h2>§ 9. Odstąpienie od umowy (konsumenci)</h2>
+    <h2 id="s-9-odstapienie-od-umowy-konsumenci">§ 9. Odstąpienie od umowy (konsumenci)</h2>
     <ol>
       <li>Jeśli jesteś <strong>konsumentem</strong> albo <strong>przedsiębiorcą na prawach konsumenta</strong> (osobą fizyczną zawierającą umowę bezpośrednio związaną z działalnością gospodarczą, gdy umowa nie ma dla Ciebie charakteru zawodowego), masz prawo odstąpić od umowy zawartej na odległość w ciągu <strong>14 dni</strong> od jej zawarcia, bez podania przyczyny. Wystarczy e-mail na <a href="mailto:mateuszlekem@gmail.com">mateuszlekem@gmail.com</a> — możesz użyć wzoru poniżej, ale nie musisz. Zwracam płatność w ciągu 14 dni tym samym sposobem, którym zapłaciłeś.</li>
       <li>Ponieważ produkcję zaczynam zwykle od razu, przed upływem 14 dni, <strong>zapytam Cię wprost o zgodę</strong> na rozpoczęcie usługi przed upływem terminu odstąpienia. Jeśli wyrazisz zgodę i usługa zostanie w pełni wykonana (film dostarczony), <strong>tracisz prawo odstąpienia</strong> — art. 38 pkt 1 ustawy z dnia 30 maja 2014 r. o prawach konsumenta. Jeśli odstąpisz po rozpoczęciu, ale przed pełnym wykonaniem, zapłacisz za część wykonaną proporcjonalnie.</li>
@@ -200,7 +165,7 @@ footer nav a:hover{color:var(--amber)}
       „Ja, [imię i nazwisko], informuję o odstąpieniu od umowy o wykonanie filmu / pakietu [nazwa] zawartej dnia [data]. Dane do zwrotu płatności: [numer rachunku]. [Data]”
     </div>
 
-    <h2>§ 10. Reklamacje</h2>
+    <h2 id="s-10-reklamacje">§ 10. Reklamacje</h2>
     <ol>
       <li>Jeśli film jest niezgodny z tym, co ustaliliśmy (np. błędne dane kontaktowe, inna długość, brak uzgodnionego elementu, wada techniczna pliku), wyślij reklamację na <a href="mailto:mateuszlekem@gmail.com">mateuszlekem@gmail.com</a>, opisując, co jest nie tak. Przydadzą się: nazwa filmu, data dostarczenia i Twoje oczekiwanie (poprawa, ponowne wykonanie, obniżenie ceny, zwrot).</li>
       <li>Odpowiadam w ciągu <strong>14 dni</strong> od otrzymania reklamacji. Jeśli nie odpowiem w tym terminie, reklamację uznaje się za przyjętą.</li>
@@ -208,30 +173,55 @@ footer nav a:hover{color:var(--amber)}
       <li>Reklamacja nie obejmuje subiektywnej oceny stylu filmu po zaakceptowaniu scenariusza ani braku określonych wyników (wyświetleń, zapytań, sprzedaży).</li>
     </ol>
 
-    <h2>§ 11. Pozasądowe rozwiązywanie sporów</h2>
+    <h2 id="s-11-pozasadowe-rozwiazywanie-sporow">§ 11. Pozasądowe rozwiązywanie sporów</h2>
     <ol>
       <li>Jeśli jesteś konsumentem, możesz skorzystać z pozasądowych sposobów rozpatrywania reklamacji i dochodzenia roszczeń: zwrócić się do <strong>miejskiego lub powiatowego rzecznika konsumentów</strong> (w Katowicach: Miejski Rzecznik Konsumentów, Urząd Miasta Katowice), do <strong>Wojewódzkiego Inspektoratu Inspekcji Handlowej w Katowicach</strong> z wnioskiem o mediację lub o rozstrzygnięcie sporu przez stały sąd polubowny, albo skorzystać z unijnej platformy ODR: <a href="https://ec.europa.eu/consumers/odr" rel="noopener" target="_blank">ec.europa.eu/consumers/odr</a>.</li>
       <li>Wcześniej zawsze warto po prostu do mnie napisać — większość spraw da się załatwić w jednej rozmowie.</li>
       <li>Spory, których nie uda się rozwiązać polubownie, rozstrzyga sąd powszechny właściwy według przepisów ogólnych.</li>
     </ol>
 
-    <h2>§ 12. Dane osobowe</h2>
+    <h2 id="s-12-dane-osobowe">§ 12. Dane osobowe</h2>
     <p>Zasady przetwarzania danych opisuje <a href="polityka-prywatnosci.html">Polityka prywatności</a>, która jest częścią tego regulaminu.</p>
 
-    <h2>§ 13. Postanowienia końcowe</h2>
+    <h2 id="s-13-postanowienia-koncowe">§ 13. Postanowienia końcowe</h2>
     <ol>
       <li>Regulamin mogę zmienić (np. ceny, terminy). Zmiana nie dotyczy zamówień złożonych przed jej wejściem w życie — do nich stosuje się wersja wysłana z wyceną.</li>
       <li>W sprawach nieuregulowanych stosuje się prawo polskie, w szczególności Kodeks cywilny, ustawę o prawach konsumenta i ustawę o prawie autorskim i prawach pokrewnych.</li>
       <li>Jeśli któreś postanowienie okaże się nieważne, pozostałe zachowują moc.</li>
     </ol>
 
+      </article>
+      <aside class="toc" aria-label="Spis treści"><details open><summary>Spis treści</summary><ol><li><a href="#s-1-kto-swiadczy-usluge">§ 1. Kto świadczy usługę</a></li><li><a href="#s-2-na-czym-polega-usluga">§ 2. Na czym polega usługa</a></li><li><a href="#s-3-ceny">§ 3. Ceny</a></li><li><a href="#s-4-jak-zlozyc-zamowienie">§ 4. Jak złożyć zamówienie</a></li><li><a href="#s-5-platnosc">§ 5. Płatność</a></li><li><a href="#s-6-termin-poprawki-odbior">§ 6. Termin, poprawki, odbiór</a></li><li><a href="#s-7-prawa-do-filmu-licencja">§ 7. Prawa do filmu (licencja)</a></li><li><a href="#s-8-za-co-odpowiadasz-ty">§ 8. Za co odpowiadasz Ty</a></li><li><a href="#s-9-odstapienie-od-umowy-konsumenci">§ 9. Odstąpienie od umowy (konsumenci)</a></li><li><a href="#s-10-reklamacje">§ 10. Reklamacje</a></li><li><a href="#s-11-pozasadowe-rozwiazywanie-sporow">§ 11. Pozasądowe rozwiązywanie sporów</a></li><li><a href="#s-12-dane-osobowe">§ 12. Dane osobowe</a></li><li><a href="#s-13-postanowienia-koncowe">§ 13. Postanowienia końcowe</a></li></ol></details></aside>
+    </div>
   </div>
 </main>
-<footer>
+<script>if (window.innerWidth < 900) { var d = document.querySelector('.toc details'); if (d) d.open = false; }</script>
+<footer class="footer">
   <div class="wrap">
-    <nav aria-label="Stopka"><a href="./">Oferta</a><a href="cennik.html">Cennik</a><a href="regulamin.html">Regulamin</a><a href="polityka-prywatnosci.html">Polityka prywatności</a><a href="dostepnosc.html">Dostępność</a></nav>
-    <p style="margin-top:14px">Usługodawca: Mateusz Lekem, Katowice · działalność nierejestrowana (art. 5 ustawy Prawo przedsiębiorców) · e-mail: <a href="mailto:mateuszlekem@gmail.com">mateuszlekem@gmail.com</a> · tel. <a href="tel:+48797224220">797 224 220</a>.</p>
-    <p>Filmy powstają z użyciem narzędzi AI (lektor, montaż). Materiał wideo pochodzi z licencjonowanych bibliotek lub od klienta. Ceny podane na stronie są cenami końcowymi w PLN. Nazwy firm w filmach demo są fikcyjne.</p>
+    <div class="footer-grid">
+      <div>
+        <p><strong style="color:var(--text)">Mateusz Lekem</strong> · Katowice<br>działalność nierejestrowana (art. 5 ustawy Prawo przedsiębiorców) — wystawiam rachunek, nie fakturę VAT</p>
+        <p><a href="mailto:mateuszlekem@gmail.com">mateuszlekem@gmail.com</a> · <a href="tel:+48797224220">797&nbsp;224&nbsp;220</a></p>
+      </div>
+      <div>
+        <nav aria-label="Stopka">
+          <a href="./#demo">Przykłady</a>
+          <a href="cennik.html">Cennik</a>
+          <a href="cennik.pdf">Cennik PDF</a>
+          <a href="regulamin.html">Regulamin</a>
+          <a href="polityka-prywatnosci.html">Polityka prywatności</a>
+          <a href="dostepnosc.html">Dostępność</a>
+        </nav>
+      </div>
+      <div>
+        <p>Filmy powstają z użyciem narzędzi AI (lektor, montaż). Materiał wideo pochodzi z licencjonowanych bibliotek lub od klienta.</p>
+        <p>Ceny na stronie są cenami końcowymi w PLN.</p>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 2026 Mateusz Lekem · Katowice</span>
+      <span>Nazwy firm w filmach demo są fikcyjne — to przykłady formatu, nie klienci.</span>
+    </div>
   </div>
 </footer>
 </body>

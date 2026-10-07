@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- 2026-10-07 — wersja robocza do weryfikacji przez prawnika. Dokument przygotowany na podstawie ogólnie dostępnych wymogów RODO / ustawy o prawach konsumenta; nie stanowi porady prawnej. -->
+<!-- 2026-10-07 — wersja robocza do weryfikacji przez prawnika. Nie stanowi porady prawnej. -->
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
@@ -27,52 +27,7 @@
 <meta name="twitter:title" content="Deklaracja dostępności — rolki reklamowe Katowice">
 <meta name="twitter:description" content="Jak zadbałem o dostępność strony: kontrast 7:1, obsługa klawiaturą, opisy filmów, brak autoodtwarzania z dźwiękiem. Kontakt w sprawie barier.">
 <meta name="twitter:image" content="https://siles69.github.io/kinowy-autopilot-feed/oferta/og.png">
-<style>
-@font-face{font-family:Inter;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/inter-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:Inter;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/inter-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:Inter;font-style:normal;font-weight:500;font-display:swap;src:url(fonts/inter-latin-ext-500-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:Inter;font-style:normal;font-weight:500;font-display:swap;src:url(fonts/inter-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:Inter;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/inter-latin-ext-600-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:Inter;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/inter-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:Inter;font-style:normal;font-weight:800;font-display:swap;src:url(fonts/inter-latin-ext-800-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:Inter;font-style:normal;font-weight:800;font-display:swap;src:url(fonts/inter-latin-800-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-:root{--bg:#0f0f12;--bg-2:#17171c;--line:#2b2b35;--text:#f2f1ec;--muted:#a7a6a0;--amber:#f5a524;--amber-2:#ffc45c;--amber-ink:#1a1200}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
-a{color:var(--amber)}
-a:focus-visible{outline:3px solid var(--amber-2);outline-offset:3px;border-radius:4px}
-.wrap{max-width:820px;margin:0 auto;padding:0 16px}
-header.top{position:sticky;top:0;z-index:10;background:rgba(15,15,18,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
-.brand{font-weight:800;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:8px}
-.brand .dot{width:10px;height:10px;border-radius:50%;background:var(--amber)}
-header nav a{color:var(--muted);text-decoration:none;font-size:.95rem;margin-left:18px}
-header nav a:hover{color:var(--text)}
-.skip{position:absolute;left:-999px;top:8px;background:var(--amber);color:var(--amber-ink);padding:10px 14px;border-radius:8px;font-weight:600;z-index:100}
-.skip:focus{left:16px}
-.crumbs{font-size:.9rem;color:var(--muted);margin:28px 0 8px;display:flex;gap:8px;align-items:center}
-.crumbs a{color:var(--text);text-decoration:none}
-.crumbs .sep{color:var(--amber)}
-main{padding:0 0 56px}
-h1{font-size:clamp(1.7rem,5vw,2.4rem);line-height:1.15;margin:0 0 8px;letter-spacing:-.01em}
-h2{font-size:1.25rem;margin:36px 0 10px;padding-top:8px;border-top:1px solid var(--line)}
-h3{font-size:1.05rem;margin:22px 0 8px}
-p,li{color:#d8d7d0}
-.meta{color:var(--muted);font-size:.9rem;margin-bottom:24px}
-.box{background:var(--bg-2);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:18px 0}
-.box.warn{border-color:var(--amber)}
-ol,ul{padding-left:22px}
-li{margin:6px 0}
-dl{display:grid;grid-template-columns:max-content 1fr;gap:6px 16px}
-dt{color:var(--muted)}
-dd{margin:0}
-@media(max-width:560px){dl{grid-template-columns:1fr}dt{margin-top:8px}}
-footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:.85rem}
-footer nav a{color:var(--text);margin-right:16px;text-decoration:none}
-footer nav a:hover{color:var(--amber)}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style>
+<link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -112,22 +67,32 @@ footer nav a:hover{color:var(--amber)}
 </head>
 <body>
 <a class="skip" href="#main">Przejdź do treści</a>
-<header class="top">
+<header class="nav">
   <div class="wrap">
-    <a class="brand" href="./"><span class="dot"></span>Rolki dla firm · Katowice</a>
-    <nav><a href="./">Oferta</a><a href="cennik.html">Cennik</a><a href="./#kontakt">Kontakt</a></nav>
+    <a class="brand" href="./">Mateusz <span>· rolki reklamowe</span></a>
+    <nav aria-label="Główna">
+      <a href="./#demo">Przykłady</a>
+      <a href="./#jak">Jak to działa</a>
+      <a class="keep" href="cennik.html">Cennik</a>
+      <a href="./#faq">FAQ</a>
+      <a class="btn primary" href="./#kontakt">Pierwszy film gratis</a>
+    </nav>
   </div>
 </header>
-<main id="main">
+<main id="main" class="page">
   <div class="wrap">
     <nav class="crumbs" aria-label="Okruszki"><a href="./">Oferta</a><span class="sep" aria-hidden="true">›</span><span aria-current="page">Dostępność</span></nav>
-    <h1>Deklaracja dostępności</h1>
-    <p class="meta">Wersja z dnia 2026-10-07. Usługodawca: Mateusz Lekem, Katowice.</p>
+    <div class="doc-head">
+      <h1>Deklaracja dostępności</h1>
+      <p class="meta">Wersja z 7 października 2026 r.<br>Usługodawca: Mateusz Lekem, Katowice.</p>
+    </div>
+    <div class="doc-layout">
+      <article class="doc">
 
-    <h2>Deklaracja dostępności</h2>
+    <h2 id="s-deklaracja-dostepnosci">Deklaracja dostępności</h2>
     <p>Dbam o to, żeby ta strona była czytelna dla każdego, w tym dla osób korzystających z czytników ekranu, nawigacji klawiaturą i powiększenia. Strona jest tworzona zgodnie z zaleceniami WCAG 2.1 na poziomie AA w zakresie, który da się zapewnić w prostej stronie statycznej. Jeśli coś jest niedostępne, napisz na <a href="mailto:mateuszlekem@gmail.com">mateuszlekem@gmail.com</a> — poprawię i odpowiem w ciągu 7 dni.</p>
 
-    <h2>Co jest zapewnione</h2>
+    <h2 id="s-co-jest-zapewnione">Co jest zapewnione</h2>
     <ul>
       <li><strong>Kontrast</strong> — wszystkie zestawienia tekstu i tła mają współczynnik kontrastu co najmniej 7:1 (wymóg AA to 4,5:1; sprawdzone wzorem WCAG dla każdej pary kolorów).</li>
       <li><strong>Klawiatura</strong> — każdy link, przycisk, sekcja FAQ i film da się obsłużyć klawiaturą; element w fokusie ma widoczną bursztynową obwódkę; na początku strony jest link „Przejdź do treści”.</li>
@@ -137,22 +102,47 @@ footer nav a:hover{color:var(--amber)}
       <li><strong>Brak barier technicznych</strong> — bez cookies, bez skryptów zewnętrznych, bez wyskakujących okien, bez migających elementów.</li>
     </ul>
 
-    <h2>Ograniczenia</h2>
+    <h2 id="s-ograniczenia">Ograniczenia</h2>
     <ul>
       <li>Filmy demo zawierają lektora i napisy wypalone w obrazie; nie mają osobnej ścieżki napisów (WebVTT) ani audiodeskrypcji — treść każdego filmu jest opisana w podpisie pod nim i w opisie alternatywnym.</li>
       <li>Cennik w formacie PDF jest wersją do druku; jego pełna, dostępna treść znajduje się na stronie <a href="cennik.html">Cennik</a>.</li>
     </ul>
 
-    <h2>Kontakt w sprawie dostępności</h2>
-    <p>E-mail: <a href="mailto:mateuszlekem@gmail.com">mateuszlekem@gmail.com</a>, telefon: <a href="tel:+48797224220">797 224 220</a>. Jeśli wolisz inny kanał lub format informacji (np. opis filmu w tekście), daj znać — prześlę.</p>
+    <h2 id="s-kontakt-w-sprawie-dostepnosci">Kontakt w sprawie dostępności</h2>
+    <p>E-mail: <a href="mailto:mateuszlekem@gmail.com">mateuszlekem@gmail.com</a>, telefon: <a href="tel:+48797224220">797&nbsp;224&nbsp;220</a>. Jeśli wolisz inny kanał lub format informacji (np. opis filmu w tekście), daj znać — prześlę.</p>
 
+      </article>
+      <aside class="toc" aria-label="Spis treści"><details open><summary>Spis treści</summary><ol><li><a href="#s-deklaracja-dostepnosci">Deklaracja dostępności</a></li><li><a href="#s-co-jest-zapewnione">Co jest zapewnione</a></li><li><a href="#s-ograniczenia">Ograniczenia</a></li><li><a href="#s-kontakt-w-sprawie-dostepnosci">Kontakt w sprawie dostępności</a></li></ol></details></aside>
+    </div>
   </div>
 </main>
-<footer>
+<script>if (window.innerWidth < 900) { var d = document.querySelector('.toc details'); if (d) d.open = false; }</script>
+<footer class="footer">
   <div class="wrap">
-    <nav aria-label="Stopka"><a href="./">Oferta</a><a href="cennik.html">Cennik</a><a href="regulamin.html">Regulamin</a><a href="polityka-prywatnosci.html">Polityka prywatności</a><a href="dostepnosc.html">Dostępność</a></nav>
-    <p style="margin-top:14px">Usługodawca: Mateusz Lekem, Katowice · działalność nierejestrowana (art. 5 ustawy Prawo przedsiębiorców) · e-mail: <a href="mailto:mateuszlekem@gmail.com">mateuszlekem@gmail.com</a> · tel. <a href="tel:+48797224220">797 224 220</a>.</p>
-    <p>Filmy powstają z użyciem narzędzi AI (lektor, montaż). Materiał wideo pochodzi z licencjonowanych bibliotek lub od klienta. Ceny podane na stronie są cenami końcowymi w PLN. Nazwy firm w filmach demo są fikcyjne.</p>
+    <div class="footer-grid">
+      <div>
+        <p><strong style="color:var(--text)">Mateusz Lekem</strong> · Katowice<br>działalność nierejestrowana (art. 5 ustawy Prawo przedsiębiorców) — wystawiam rachunek, nie fakturę VAT</p>
+        <p><a href="mailto:mateuszlekem@gmail.com">mateuszlekem@gmail.com</a> · <a href="tel:+48797224220">797&nbsp;224&nbsp;220</a></p>
+      </div>
+      <div>
+        <nav aria-label="Stopka">
+          <a href="./#demo">Przykłady</a>
+          <a href="cennik.html">Cennik</a>
+          <a href="cennik.pdf">Cennik PDF</a>
+          <a href="regulamin.html">Regulamin</a>
+          <a href="polityka-prywatnosci.html">Polityka prywatności</a>
+          <a href="dostepnosc.html">Dostępność</a>
+        </nav>
+      </div>
+      <div>
+        <p>Filmy powstają z użyciem narzędzi AI (lektor, montaż). Materiał wideo pochodzi z licencjonowanych bibliotek lub od klienta.</p>
+        <p>Ceny na stronie są cenami końcowymi w PLN.</p>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 2026 Mateusz Lekem · Katowice</span>
+      <span>Nazwy firm w filmach demo są fikcyjne — to przykłady formatu, nie klienci.</span>
+    </div>
   </div>
 </footer>
 </body>
