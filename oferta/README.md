@@ -12,6 +12,8 @@ Pliki w tym folderze:
 | `wiadomosci.md` | szablony DM / Messenger / e-mail, obiekcje, follow-up, oferta po darmowym filmie |
 | `ogloszenia.md` | teksty na Useme, OLX, Fixly, grupy FB, bio IG i FB |
 | `leady.csv` | lista 20 firm z Katowic do kontaktu |
+| `regulamin.html`, `polityka-prywatnosci.html`, `dostepnosc.html` | strony prawne i deklaracja dostępności (wersje robocze do weryfikacji) |
+| `fonts/` | czcionka Inter hostowana lokalnie (licencja OFL w `fonts/LICENSE.txt`) |
 | `ZALOZENIA.md` | założenia, które przyjąłem przy tworzeniu plików |
 
 ---
@@ -43,7 +45,7 @@ Pliki w tym folderze:
 
 ## Dane kontaktowe
 
-Uzupełnione we wszystkich plikach: Instagram `instagram.com/matilemek`, Messenger `facebook.com/messages/t/MateuszLemek`, e-mail `odpowiedzi.opinie@gmail.com`, tel. `797 224 220`. Jeśli coś się zmieni, wyszukaj starą wartość w folderze `oferta/` i podmień, a potem wygeneruj PDF ponownie (sekcja niżej).
+Uzupełnione we wszystkich plikach: Instagram `instagram.com/matilemek`, Messenger `facebook.com/messages/t/MateuszLemek`, e-mail `mateuszlekem@gmail.com` (na ten adres patrzy automat przygotowujący szkice odpowiedzi — nie zmieniaj go bez aktualizacji automatu), tel. `797 224 220`, usługodawca `Mateusz Lekem`. Jeśli coś się zmieni, wyszukaj starą wartość w folderze `oferta/` i podmień, a potem wygeneruj PDF ponownie (sekcja niżej).
 
 ---
 
@@ -117,3 +119,23 @@ Albo: otwórz `cennik.html` w Chrome → Drukuj → „Zapisz jako PDF”, margi
    - dla subdomeny `www` — rekord **CNAME** → `siles69.github.io`.
 3. Po przepięciu zamień we wszystkich plikach `https://siles69.github.io/kinowy-autopilot-feed/` na nowy adres (`index.html`, `cennik.html`, `sitemap.xml`, `robots.txt`, `llms.txt`, `404.html`, `site.webmanifest`, `wiadomosci.md`, `ogloszenia.md`) — przy własnej domenie ścieżka `/kinowy-autopilot-feed/` znika, strona będzie pod `/oferta/`. Wygeneruj PDF ponownie.
 4. Dodaj domenę w Google Search Console i wyślij `sitemap.xml`.
+
+---
+
+## Strony prawne i placeholdery do uzupełnienia
+
+Dodane: `regulamin.html`, `polityka-prywatnosci.html`, `dostepnosc.html` (podlinkowane w stopkach `index.html` i `cennik.html`, dodane do `sitemap.xml`). Każdy dokument ma na górze komentarz HTML z datą i notatką „wersja robocza do weryfikacji”.
+
+Dane usługodawcy (`Mateusz Lekem`, Katowice, `mateuszlekem@gmail.com`, `797 224 220`) są już wpisane we wszystkich dokumentach i stopkach — nie ma placeholderów `TODO_*` do uzupełnienia. Jeśli zechcesz podać adres korespondencyjny, dopisz go po „Katowice” w `regulamin.html` § 1 i `polityka-prywatnosci.html` pkt 1 (nie jest wymagany, dopóki reklamacje obsługujesz e-mailem). Gdyby nazwisko wymagało poprawki, z katalogu `oferta/`:
+```bash
+sed -i 's/Mateusz Lekem/Imię Nazwisko/g' index.html cennik.html regulamin.html polityka-prywatnosci.html dostepnosc.html
+```
+Po każdej zmianie w `cennik.html` wygeneruj PDF ponownie.
+
+**Dwie zasady, które chronią Cię najbardziej:**
+1. **Regulamin wysyłaj klientowi przed zapłatą** — link do `regulamin.html` i `polityka-prywatnosci.html` wklej do każdego maila z wyceną (szablon w `wiadomosci.md`, sekcja 6 ma już to zdanie). Bez tego klient-konsument może twierdzić, że nie znał warunków, a termin odstąpienia wydłuża się do 12 miesięcy.
+2. **Przed pierwszą płatną umową daj dokumenty do przejrzenia prawnikowi** — jednorazowa weryfikacja regulaminu i polityki przez radcę prawnego kosztuje zwykle 200–400 zł i zdejmuje z Ciebie ryzyko klauzul niedozwolonych. Dokumenty są napisane prostym językiem, więc prawnik zrobi to szybko.
+
+**Co sprawdzono pod kątem ryzyka (i co zmieniono):** usunięte sformułowania sugerujące gwarancję wyników („lepiej konwertuje”, „kilka razy większy zasięg”, „jeśli nie będzie efektu”); brak jakichkolwiek opinii i referencji — w `index.html` jest pusta, ukryta sekcja `#opinie` z komentarzem, jak ją włączyć, gdy pojawią się prawdziwe opinie za zgodą klientów; nazwy firm z demo opisane jako fikcyjne w sekcji demo, stopce, cenniku i `llms.txt`; słowo „agencja” występuje tylko w zaprzeczeniu („nie jestem agencją”); brak porównań do konkurencji; jawność AI w stopce obu stron.
+
+**Google Fonts usunięte** — czcionka Inter jest w `oferta/fonts/` (8 plików woff2, 240 KB, ładowane tylko potrzebne zakresy znaków). Dzięki temu wejście na stronę nie wysyła adresu IP odwiedzającego do Google, a polityka prywatności może zgodnie z prawdą mówić „bez zewnętrznych skryptów i transferów”.

@@ -3,7 +3,7 @@
 Link do portfolio: https://siles69.github.io/kinowy-autopilot-feed/oferta/
 Cennik PDF: https://siles69.github.io/kinowy-autopilot-feed/oferta/cennik.pdf
 
-Przed publikacją zamień `797 224 220`, `odpowiedzi.opinie@gmail.com`, `https://www.instagram.com/matilemek/` na swoje dane. Nie zmieniaj cen bez aktualizacji strony.
+Przed publikacją zamień `797 224 220`, `mateuszlekem@gmail.com`, `https://www.instagram.com/matilemek/` na swoje dane. Nie zmieniaj cen bez aktualizacji strony.
 
 ---
 
@@ -108,7 +108,7 @@ Portfolio: https://siles69.github.io/kinowy-autopilot-feed/oferta/
 >
 > O co chodzi: rolki 9:16, 20–35 s, polski lektor, napisy, muzyka, Wasza oferta i kontakt. Gotowe pod Reels, TikTok i FB. Nie potrzebuję od Was nagrań — scenariusz piszę pod Waszą ofertę, materiał wideo dobieram ze stocków, albo montuję z Waszych zdjęć (+100 zł).
 >
-> Dlaczego to ma sens: krótkie wideo dostaje dziś na IG i FB kilka razy większy zasięg organiczny niż zdjęcie, a większość lokalnych firm nie publikuje go wcale, bo nie ma czasu nagrywać.
+> Dlaczego to ma sens: platformy społecznościowe promują dziś krótkie wideo mocniej niż zdjęcia, a większość lokalnych firm nie publikuje go wcale, bo nie ma czasu nagrywać. Nie obiecuję konkretnych wyników — obiecuję regularne, porządnie zrobione filmy.
 >
 > Ceny: 149 zł za film, 449 zł za 4 filmy/mies., 799 zł za 8 filmów/mies. z publikacją i opisami. Bez umowy, rachunek do kosztów.
 >
@@ -158,4 +158,4 @@ Pierwszy film robię za darmo, żebyś mógł ocenić bez ryzyka. Potem:
 Bez umowy terminowej, rozliczenie co miesiąc, rachunek do kosztów. Pracuję sam — rozmawiasz bezpośrednio z osobą, która robi Twój film.
 
 Przykłady: https://siles69.github.io/kinowy-autopilot-feed/oferta/
-Kontakt: Messenger, odpowiedzi.opinie@gmail.com, 797 224 220
+Kontakt: Messenger, mateuszlekem@gmail.com, 797 224 220

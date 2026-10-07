@@ -21,7 +21,7 @@ Nazywam się Mateusz, pracuję samodzielnie z Katowic (nie jestem agencją). Rob
 ## Kontakt
 - Instagram: https://www.instagram.com/matilemek/
 - Messenger: https://www.facebook.com/messages/t/MateuszLemek
-- E-mail: odpowiedzi.opinie@gmail.com
+- E-mail: mateuszlekem@gmail.com
 - Telefon: +48 797 224 220
 - Obszar: Katowice, Górny Śląsk; zdalnie cała Polska.
 
@@ -29,5 +29,8 @@ Nazywam się Mateusz, pracuję samodzielnie z Katowic (nie jestem agencją). Rob
 - [Strona oferty z filmami demo](https://siles69.github.io/kinowy-autopilot-feed/oferta/)
 - [Cennik](https://siles69.github.io/kinowy-autopilot-feed/oferta/cennik.html)
 - [Cennik PDF](https://siles69.github.io/kinowy-autopilot-feed/oferta/cennik.pdf)
+- [Regulamin](https://siles69.github.io/kinowy-autopilot-feed/oferta/regulamin.html)
+- [Polityka prywatności](https://siles69.github.io/kinowy-autopilot-feed/oferta/polityka-prywatnosci.html)
+- [Deklaracja dostępności](https://siles69.github.io/kinowy-autopilot-feed/oferta/dostepnosc.html)
 
-Uwaga: firmy w filmach demo („Da Marco”, „Studio Nova”, „FitZone”, „AutoGlanz”, „Klinika Dentica”) są fikcyjne i służą wyłącznie pokazaniu formatu.
+Nie obiecuję konkretnych wyników (wyświetleń, zapytań, sprzedaży). Uwaga: firmy w filmach demo („Da Marco”, „Studio Nova”, „FitZone”, „AutoGlanz”, „Klinika Dentica”) są fikcyjne i służą wyłącznie pokazaniu formatu.
