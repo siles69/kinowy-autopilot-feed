@@ -14,6 +14,9 @@ const sizes = [[390, 844], [768, 1024], [1440, 900]];
     await p.goto(base + pg, { waitUntil: 'networkidle' });
     await p.addStyleTag({ content: 'html{scroll-behavior:auto!important}' });
     await p.evaluate(() => new Promise(r => { window.scrollTo(0, document.body.scrollHeight); setTimeout(() => { window.scrollTo(0, 0); setTimeout(r, 600); }, 600); }));
+    // sekcje .reveal odsłania IntersectionObserver; przed zrzutem całej strony odsłoń wszystkie (tak jak zrobi to bezpiecznik po 1,5 s)
+    await p.evaluate(() => document.querySelectorAll('.reveal').forEach(e => e.classList.add('in')));
+    await p.waitForTimeout(500);
     const name = (pg.replace(/[\/.]+/g, '_').replace(/^_|_$/g, '') || 'index') + `-${w}`;
     await p.screenshot({ path: path.join(out, name + '.png'), fullPage: true });
     await p.screenshot({ path: path.join(out, name + '-fold.png'), fullPage: false });

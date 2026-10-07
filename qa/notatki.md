@@ -39,5 +39,34 @@ Zrzuty: `qa/round-N/` (390×844, 768×1024, 1440×900; `*-fold.png` = widok bez 
 
 ## Runda 2 (2026-10-07) — po poprawkach z rundy 1
 
-Zrzuty: `qa/round-2/`. Własny przegląd: hero 1440/768/390 zgodne z zamierzeniem (postery-karty tytułowe w telefonach), polityka z proporcjonalną tabelą, stopka na siatce, html-validate 0 błędów. Panel sędziów rundy 2 — poniżej.
+Zrzuty: `qa/round-2/`. Własny przegląd: hero 1440/768/390 zgodne z zamierzeniem (postery-karty tytułowe w telefonach), polityka z proporcjonalną tabelą, stopka na siatce, html-validate 0 błędów.
 
+**Panel sędziów rundy 2** (8 agentów; krytyk premium: „TAK z zastrzeżeniem”, sędzia spójności: „PASS z dwiema poprawkami”):
+- [high] **Środek strony czarny na zrzutach całej strony** — `.reveal{opacity:0}` zdejmował tylko IntersectionObserver; po wyłączeniu płynnego przewijania w skrypcie zrzutów sekcje nie dostawały `.in`. To także realne ryzyko dla użytkownika bez JS / z błędem skryptu. → `.js .reveal` (klasa `js` dodawana pierwszym skryptem w `<head>`, bez JS wszystko widoczne), bezpiecznik `setTimeout(…,1500)` odsłaniający wszystko, a w `qa/shoot.js` odsłonięcie `.reveal` przed zrzutem całej strony.
+- [med] Hero 1440: telefony nachodziły na siebie tak, że napisy w bocznych filmach były obcięte. → węższe boczne telefony (13 vw), środkowy większy, mniejsze nakładanie.
+- [med] Hero 768/390: telefony ucięte dolną krawędzią hero. → telefony w przepływie dokumentu (flex), bez cięcia; na mobile jeden pełny telefon.
+- [med] Cennik 768: jedna wąska kolumna kart z pustką po prawej. → 700–900 px: Pro na całą szerokość u góry, dwie karty poniżej.
+- [med] Cennik: za długie wiersze w notach (87–90 zn.). → `max-width:52ch` / `60ch`.
+- [med] Cennik mobile: drobny druk nad stopką powtarzał stopkę. → na ekranie jedno zdanie o cenach; pełna nota zostaje tylko w druku (PDF) jako `.print-fine`.
+- [med] Dostępność: H1 i pierwsze H2 identyczne. → H2 „Zobowiązanie”.
+- [med] (z rundy 1, krytyk premium) karta „149 zł” kontra „darmowy film” na tej samej karcie. → karta „Pojedynczy film — 149 zł / film”, opis „pierwszy dla nowej firmy gratis, 149 zł za kolejny”, przycisk „Zacznij od darmowego”.
+- [low] potrójne linie 1 px pod nagłówkiem dokumentów na mobile → linia tylko pod zwiniętym spisem treści; linie tabeli RODO przerywane w gutterze → ciągłe; maska chipów tylko gdy mogą się nie zmieścić (< 1100 px); poświata w Kontakcie słabsza (5 %); 404: nawigacyjny CTA obrysowy (jeden bursztynowy przycisk), większa liczba, podtytuł skalowany; stopka: linki „Jak to działa”, „FAQ”, akapity 62ch; `tel:` bez łamania.
+- Odrzucone: „cztery jednakowe karty kontaktu z ikonami” — brief wymaga czterech przycisków z inline SVG; „kolejność cen”, „2 kolumny demo na mobile” — jak w rundzie 1.
+- PDF: reguła tabletowa (700–900 px) łapała szerokość A4 i rozbijała cennik na 2 strony → nadpisana w `@media print`.
+
+## Runda 3 (2026-10-07) — po poprawkach z rundy 2
+
+Zrzuty: `qa/round-3/`. Własny przegląd: pełne strony pokazują wszystkie sekcje; hero 768 z trzema telefonami w przepływie; 390 z jednym pełnym telefonem; PDF 1 strona. Walidacje: konsola 0/0 na 6 stronach, HTTP ≥ 400: 0, zasoby zewnętrzne: 0, html-validate 0, JSON-LD ok, waga bez wideo ≈ 127 KB (index), przyciski ≥ 48 px.
+
+**Panel sędziów rundy 3** (krytyk premium: „TAK — w ~90% robota drogiego studia”; sędzia spójności: „gotowe do wypuszczenia po trzech poprawkach CSS”; 5 z 6 stron bez znalezisk „high/med”):
+- [high] index 390: rząd statystyk z `white-space:nowrap` dotykał prawej krawędzi, a zdanie obok było ściśnięte do 6 kolumn (reguła `.after-steps p{grid-column:1/7}` wygrywała specyficznością z `.after-steps>*`). → statystyki zawijane (`flex-wrap`), etykiety bez `nowrap` < 480 px, zdanie na pełną szerokość.
+- [med] polityka: kolumny tabeli RODO stykały się — `padding-left` nadpisany przez skrót `padding`. → kolejność reguł.
+- [med] hero 1440/768: środkowy telefon zasłaniał napis w lewym. → boczne telefony dalej od środka (−6 %), środkowy węższy, na tablecie odstęp 26 px.
+- [med] licznik pokazywał „0 h”, gdy animacja nie odpaliła (zrzut całej strony, brak JS). → w HTML od razu „48”, JS animuje 0 → 48 tylko gdy obserwator zadziała.
+- [low] poszarpany stos `.cta-row` na mobile → przyciski na pełną szerokość < 480 px; linia bazowa cen w cenniku 1440 (etykieta Pro w przepływie) → karty bez etykiety dostają równy odstęp górny; ghostowy CTA w nawigacji 404 — zostawiony celowo (jeden bursztynowy przycisk na stronie błędu).
+
+## Runda 4 (2026-10-07) — weryfikacja końcowa
+
+Zrzuty: `qa/round-4/` (po poprawkach z rundy 3) i `qa/final/` (po ostatnich szlifach). Sprawdzone ręcznie: statystyki na 390 mieszczą się w marginesach 16–374 px (`scrollWidth` = 390), tabela RODO z odstępem 24 px, telefony w hero bez zasłaniania napisów, licznik „48”. Konsola 0/0 na 6 stronach, HTTP ≥ 400: 0, zasoby zewnętrzne: 0, html-validate 0, PDF 1 strona, JS w `index.html`: 41 linii.
+
+**Wydajność po rundzie 3 (index, Lighthouse 13.5):** desktop 100 / 100 / 100 / 100 (LCP 0,6 s, CLS 0, TBT 0). Mobile początkowo 93 (LCP 3,2 s — H1 czekał na czcionki, bo 6 posterów kart demo ładowało się od razu przez atrybut `poster` i konkurowało o symulowane łącze). Zmiany: CSS inline tylko w `index.html` (podstrony: `style.css`), preload 4 plików czcionek (latin + latin-ext, serif i tekst), postery 405×720 (25–38 KB), postery kart demo jako `<img loading="lazy">` nad `<video>` (atrybut `poster` ustawiany z `data-poster` przy odtworzeniu). Wynik: **mobile 97 / 100 / 100 / 100** (LCP 2,6 s, FCP 1,5 s), dwa przebiegi zgodne. Waga index bez wideo i posterów ≈ 101 KB (HTML z inline CSS 58 KB + czcionki).

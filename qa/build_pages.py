@@ -68,8 +68,14 @@ def head_meta(old_html, drop_ld=False):
     return keep, ld_obj
 
 
-def shell(meta_lines, ld_obj, body, css="style.css", nav_prefix="", extra_head="", body_class=""):
+def shell(meta_lines, ld_obj, body, css="style.css", nav_prefix="", extra_head="", body_class="", inline_css=False):
     ld = f'<script type="application/ld+json">\n{json.dumps(ld_obj, ensure_ascii=False, indent=1)}\n</script>\n' if ld_obj else ""
+    # Strona główna: CSS inline (jedno żądanie mniej na ścieżce LCP). Podstrony: wspólny plik style.css.
+    if inline_css:
+        css_src = (OUT / "style.css").read_text(encoding="utf-8").replace("url(fonts/", "url(fonts/")
+        css_tag = "<style>\n" + css_src + "\n</style>"
+    else:
+        css_tag = f'<link rel="stylesheet" href="{css}">'
     nav = f"""<a class="skip" href="#main">Przejdź do treści</a>
 <header class="nav">
   <div class="wrap">
@@ -94,6 +100,8 @@ def shell(meta_lines, ld_obj, body, css="style.css", nav_prefix="", extra_head="
       <div>
         <nav aria-label="Stopka">
           <a href="{nav_prefix}./#demo">Przykłady</a>
+          <a href="{nav_prefix}./#jak">Jak to działa</a>
+          <a href="{nav_prefix}./#faq">FAQ</a>
           <a href="{nav_prefix}cennik.html">Cennik</a>
           <a href="{nav_prefix}cennik.pdf">Cennik PDF</a>
           <a href="{nav_prefix}regulamin.html">Regulamin</a>
@@ -117,7 +125,8 @@ def shell(meta_lines, ld_obj, body, css="style.css", nav_prefix="", extra_head="
 <html lang="pl">
 <head>
 {chr(10).join(meta_lines)}
-<link rel="stylesheet" href="{css}">
+<script>document.documentElement.classList.add("js")</script>
+{css_tag}
 {extra_head}{ld}</head>
 <body{(' class="' + body_class + '"') if body_class else ''}>
 {nav}{body}
@@ -137,11 +146,14 @@ def build_index():
             node["mainEntity"] = [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]
     # dodatkowo: preload krytycznych czcionek
     extra = ('<link rel="preload" href="fonts/instrument-serif-latin-400.woff2" as="font" type="font/woff2" crossorigin>\n'
-             '<link rel="preload" href="fonts/inter-tight-latin-400.woff2" as="font" type="font/woff2" crossorigin>\n')
+             '<link rel="preload" href="fonts/instrument-serif-latin-ext-400.woff2" as="font" type="font/woff2" crossorigin>\n'
+             '<link rel="preload" href="fonts/inter-tight-latin-400.woff2" as="font" type="font/woff2" crossorigin>\n'
+             '<link rel="preload" href="fonts/inter-tight-latin-ext-400.woff2" as="font" type="font/woff2" crossorigin>\n')
 
     demos = "\n".join(f"""      <article class="demo reveal">
         <div class="frame">
-          <video src="../demo/demo-{k}.mp4" poster="../demo/poster-{k}.jpg" preload="none" playsinline aria-label="{aria}">Twoja przeglądarka nie obsługuje wideo. <a href="../demo/demo-{k}.mp4">Pobierz film</a>.</video>
+          <img class="poster" src="../demo/poster-{k}.jpg" alt="" width="405" height="720" loading="lazy" decoding="async">
+          <video src="../demo/demo-{k}.mp4" data-poster="../demo/poster-{k}.jpg" preload="none" playsinline aria-label="{aria}">Twoja przeglądarka nie obsługuje wideo. <a href="../demo/demo-{k}.mp4">Pobierz film</a>.</video>
           <button class="play" type="button" aria-label="Odtwórz: {branza.lower()}"><span>{ICONS['play']}</span></button>
         </div>
         <div class="cap">
@@ -221,7 +233,7 @@ def build_index():
     <div class="after-steps reveal">
       <p>Nie potrzebujesz nagrań, aktorów ani studia.</p>
       <div class="stats">
-        <div class="stat"><b><span data-count="48">0</span> h</b><span>od opisu do filmu</span></div>
+        <div class="stat"><b><span data-count="48">48</span> h</b><span>od opisu do filmu</span></div>
         <div class="stat"><b>1</b><span>runda poprawek w cenie</span></div>
         <div class="stat"><b>0</b><span>nagrań od Ciebie</span></div>
       </div>
@@ -268,11 +280,11 @@ def build_index():
     </div>
     <div class="plans reveal">
       <div class="plan">
-        <div class="name">Film testowy</div>
-        <div class="price">149 zł<small>/ 1 film</small></div>
-        <p class="sub">Albo pierwszy film gratis — z nazwą Twojej firmy, bez zobowiązań.</p>
+        <div class="name">Pojedynczy film</div>
+        <div class="price">149 zł<small>/ film</small></div>
+        <p class="sub">Jeden film bez pakietu. Pierwszy dla nowej firmy jest gratis — 149 zł płacisz dopiero za kolejny.</p>
         <ul><li>1 rolka 9:16, 20–35 s</li><li>polski lektor AI i napisy</li><li>materiał stockowy</li><li>1 runda poprawek</li></ul>
-        <a class="btn" href="#kontakt">Zamów darmowy film</a>
+        <a class="btn" href="#kontakt">Zacznij od darmowego</a>
       </div>
       <div class="plan featured">
         <span class="tag">Najczęściej wybierany</span>
@@ -351,6 +363,7 @@ def build_index():
   else {
     var io = new IntersectionObserver(function(en){ en.forEach(function(x){ if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } }); }, { threshold: .12 });
     els.forEach(function(e){ io.observe(e); });
+    setTimeout(function(){ els.forEach(function(e){ e.classList.add('in'); }); }, 1500); // bezpiecznik: nic nie zostaje ukryte
   }
   // 2. Telefony w hero: autoodtwarzanie bez dźwięku tylko gdy widoczne (nie przy reduced motion)
   var hv = document.querySelectorAll('.phone video');
@@ -364,6 +377,7 @@ def build_index():
     var v = card.querySelector('video'), btn = card.querySelector('.play');
     btn.addEventListener('click', function(){
       if (current && current !== v) { current.pause(); current.controls = false; current.closest('.demo').classList.remove('playing'); }
+      if (!v.poster) v.poster = v.getAttribute('data-poster');
       card.classList.add('playing'); v.controls = true; v.muted = false; current = v; v.play().catch(function(){});
     });
     v.addEventListener('ended', function(){ card.classList.remove('playing'); v.controls = false; v.currentTime = 0; });
@@ -372,8 +386,7 @@ def build_index():
   var c = document.querySelector('[data-count]');
   if (c) {
     var target = +c.getAttribute('data-count');
-    if (rm || !hasIO) { c.textContent = target; }
-    else {
+    if (!(rm || !hasIO)) { // bez JS/IO zostaje statyczne „48”
       var co = new IntersectionObserver(function(en){
         if (!en[0].isIntersecting) return; co.disconnect();
         var t0 = performance.now();
@@ -384,7 +397,7 @@ def build_index():
   }
 })();
 </script>"""
-    (OUT / "index.html").write_text(shell(meta, ld, body, extra_head=extra), encoding="utf-8")
+    (OUT / "index.html").write_text(shell(meta, ld, body, extra_head=extra, inline_css=True), encoding="utf-8")
     print("index.html")
 
 
@@ -442,11 +455,11 @@ def build_cennik():
 
     <div class="plans">
       <div class="plan">
-        <div class="name">Film testowy</div>
-        <div class="price">149 zł<small>/ 1 film</small></div>
-        <p class="sub">Albo pierwszy film gratis — z nazwą Twojej firmy, bez zobowiązań.</p>
+        <div class="name">Pojedynczy film</div>
+        <div class="price">149 zł<small>/ film</small></div>
+        <p class="sub">Jeden film bez pakietu. Pierwszy dla nowej firmy jest gratis — 149 zł płacisz dopiero za kolejny.</p>
         <ul><li>1 rolka 9:16, 20–35 s</li><li>polski lektor AI i napisy</li><li>materiał stockowy</li><li>1 runda poprawek</li></ul>
-        <a class="btn" href="./#kontakt">Zamów darmowy film</a>
+        <a class="btn" href="./#kontakt">Zacznij od darmowego</a>
       </div>
       <div class="plan featured">
         <span class="tag">Najczęściej wybierany</span>
@@ -478,7 +491,8 @@ def build_cennik():
 
     <p class="print-contact">Mateusz Lekem · Katowice · <a href="mailto:mateuszlekem@gmail.com">mateuszlekem@gmail.com</a> · tel. 797 224 220 · Instagram: <a href="https://www.instagram.com/matilemek/">instagram.com/matilemek</a> · portfolio i demo: <a href="{BASE}">siles69.github.io/kinowy-autopilot-feed/oferta/</a></p>
 
-    <p class="fine">Ceny końcowe w PLN (brutto, bez VAT — działalność nierejestrowana, wystawiam rachunek). Rozliczenie miesięczne, rezygnacja w dowolnym momencie, bez umowy na czas określony. Filmy powstają z użyciem narzędzi AI (lektor, montaż); materiał wideo pochodzi z licencjonowanych bibliotek lub od klienta. Nazwy firm w filmach demo są fikcyjne. Usługodawca: Mateusz Lekem, Katowice · mateuszlekem@gmail.com · 797 224 220. Zasady współpracy: <a href="regulamin.html">regulamin</a> i <a href="polityka-prywatnosci.html">polityka prywatności</a>.</p>
+    <p class="fine">Ceny końcowe w PLN, bez VAT (działalność nierejestrowana — wystawiam rachunek). Rozliczenie miesięczne, rezygnacja w dowolnym momencie. Zasady współpracy: <a href="regulamin.html">regulamin</a> i <a href="polityka-prywatnosci.html">polityka prywatności</a>.</p>
+    <p class="print-fine">Ceny końcowe w PLN (brutto, bez VAT — działalność nierejestrowana, wystawiam rachunek). Rozliczenie miesięczne, rezygnacja w dowolnym momencie, bez umowy na czas określony. Filmy powstają z użyciem narzędzi AI (lektor, montaż); materiał wideo pochodzi z licencjonowanych bibliotek lub od klienta. Nazwy firm w filmach demo są fikcyjne. Usługodawca: Mateusz Lekem, Katowice · mateuszlekem@gmail.com · 797 224 220. Regulamin i polityka prywatności: siles69.github.io/kinowy-autopilot-feed/oferta/</p>
 
     <div class="cta-row no-print"><a class="btn" href="./">← Wróć do oferty i filmów demo</a><a class="btn" href="cennik.pdf">Pobierz PDF</a></div>
   </div>
@@ -496,7 +510,7 @@ def build_404():
     <div class="grid">
       <div class="c7">
         <div class="code" aria-hidden="true">404</div>
-        <h1 style="font-size:clamp(32px,4vw,56px);margin:16px 0 20px">Tej strony tu nie ma.</h1>
+        <h1 style="font-size:clamp(32px,5.5vw,56px);margin:16px 0 20px">Tej strony tu nie ma.</h1>
         <p class="lead">Adres jest nieprawidłowy albo strona została przeniesiona. Oferta rolek reklamowych dla firm z Katowic jest pod adresem poniżej.</p>
         <div class="cta-row">
           <a class="btn primary" href="/kinowy-autopilot-feed/oferta/">Przejdź do oferty</a>
@@ -506,7 +520,7 @@ def build_404():
     </div>
   </div>
 </main>"""
-    html = shell(meta, ld, body, css="/kinowy-autopilot-feed/oferta/style.css", nav_prefix="/kinowy-autopilot-feed/oferta/")
+    html = shell(meta, ld, body, css="/kinowy-autopilot-feed/oferta/style.css", nav_prefix="/kinowy-autopilot-feed/oferta/", body_class="notfound-page")
     (ROOT / "404.html").write_text(html, encoding="utf-8")
     print("404.html")
 
