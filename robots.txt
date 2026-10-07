@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://siles69.github.io/kinowy-autopilot-feed/sitemap.xml

@@ -85,3 +85,35 @@ Po edycji `cennik.html` (ceny, kontakt):
 chromium --headless=new --no-pdf-header-footer --print-to-pdf=cennik.pdf --virtual-time-budget=4000 "file://$PWD/cennik.html"
 ```
 Albo: otwórz `cennik.html` w Chrome → Drukuj → „Zapisz jako PDF”, marginesy „Brak”, włącz „Grafika tła”.
+
+---
+
+## Co dodano (SEO / technika)
+
+**W `oferta/index.html` i `oferta/cennik.html`:**
+- unikalne `<title>` (≤ 60 zn.) i `<meta name="description">` (≤ 155 zn.) z frazą „rolki reklamowe Katowice”, `<link rel="canonical">`, `theme-color`, `lang="pl"`;
+- Open Graph + Twitter Card (`og:image` = `oferta/og.png`, 1200×630, generowany z `scratch` HTML w stylu strony — źródło w ZALOZENIA.md);
+- dane strukturalne JSON-LD: `ProfessionalService` (nazwa, opis, obszar: Katowice/Górny Śląsk, telefon, e-mail, godziny kontaktu pn–pt 9–18) + `OfferCatalog` z trzema pakietami w PLN + `FAQPage` (5 pytań) na stronie głównej; `BreadcrumbList` + `WebPage` na cenniku;
+- dokładnie jeden `<h1>` na stronę, poprawna hierarchia H1 → H2 → H3;
+- favicon (`favicon.svg`, `favicon.ico` 32×32, `apple-touch-icon.png` 180×180, `icon-512.png`) + `site.webmanifest`;
+- filmy: `poster` (klatki z ffmpeg, `demo/poster-*.jpg`, < 80 KB), `preload="none"`, `aria-label`, obsługa klawiatury (Enter/spacja włącza dźwięk), brak autoodtwarzania z dźwiękiem, brak autoodtwarzania przy `prefers-reduced-motion`;
+- dostępność: link „Przejdź do treści”, widoczny `:focus-visible` na linkach/przyciskach/wideo, kontrasty tekstu ≥ 7:1 (sprawdzone wzorem WCAG), `<main>`, `<nav aria-label>`;
+- linkowanie: nav i stopka → cennik HTML/PDF, cennik → okruszki „Oferta › Cennik” i link powrotny (ukryte w druku, więc PDF bez zmian).
+
+**W katalogu głównym repo (GitHub Pages czyta je z roota):**
+- `robots.txt` (allow all + sitemap), `sitemap.xml` (oferta + cennik, `lastmod`), `llms.txt` (opis oferty dla modeli językowych), `404.html` w stylu strony z powrotem do `/kinowy-autopilot-feed/oferta/`.
+
+**Jak to sprawdzałem:** strony uruchomione w headless Chromium (Playwright) przez lokalny serwer HTTP z tym samym prefiksem ścieżki co Pages — zero błędów i ostrzeżeń w konsoli, zero odpowiedzi HTTP ≥ 400 dla zasobów, JSON-LD parsuje się, brak przewijania poziomego przy 390 px. Możesz powtórzyć po każdej zmianie: https://validator.schema.org/ (wklej URL strony), https://search.google.com/test/rich-results, https://developers.facebook.com/tools/debug/ (podgląd OG).
+
+**Po zmianie treści pamiętaj:** zaktualizuj `lastmod` w `sitemap.xml`, a jeśli zmieniasz ceny — także w JSON-LD w `index.html` (sekcja `hasOfferCatalog`) i w `llms.txt`.
+
+---
+
+## Własna domena (gdy ją kupisz)
+
+1. W katalogu głównym repo utwórz plik `CNAME` z samą nazwą domeny, np. `rolkikatowice.pl` (bez `https://`). Na GitHubie: Settings → Pages → Custom domain → wpisz tę samą domenę i włącz „Enforce HTTPS” (certyfikat pojawia się do ~24 h).
+2. U rejestratora domeny ustaw DNS:
+   - dla domeny głównej (`rolkikatowice.pl`) — cztery rekordy **A**: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153` (opcjonalnie AAAA: `2606:50c0:8000::153`, `8001::153`, `8002::153`, `8003::153`);
+   - dla subdomeny `www` — rekord **CNAME** → `siles69.github.io`.
+3. Po przepięciu zamień we wszystkich plikach `https://siles69.github.io/kinowy-autopilot-feed/` na nowy adres (`index.html`, `cennik.html`, `sitemap.xml`, `robots.txt`, `llms.txt`, `404.html`, `site.webmanifest`, `wiadomosci.md`, `ogloszenia.md`) — przy własnej domenie ścieżka `/kinowy-autopilot-feed/` znika, strona będzie pod `/oferta/`. Wygeneruj PDF ponownie.
+4. Dodaj domenę w Google Search Console i wyślij `sitemap.xml`.

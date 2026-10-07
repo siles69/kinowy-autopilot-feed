@@ -1,0 +1,16 @@
+{
+  "name": "Rolki reklamowe dla firm — Katowice",
+  "short_name": "Rolki Katowice",
+  "description": "Krótkie pionowe filmy reklamowe z polskim lektorem i napisami dla lokalnych firm z Katowic. Pierwsza rolka za darmo.",
+  "lang": "pl",
+  "start_url": "/kinowy-autopilot-feed/oferta/",
+  "scope": "/kinowy-autopilot-feed/oferta/",
+  "display": "browser",
+  "background_color": "#0f0f12",
+  "theme_color": "#0f0f12",
+  "icons": [
+    { "src": "/kinowy-autopilot-feed/oferta/favicon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "/kinowy-autopilot-feed/oferta/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/kinowy-autopilot-feed/oferta/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
