@@ -43,7 +43,7 @@ Pliki w tym folderze:
 
 ## Dane kontaktowe
 
-Uzupełnione we wszystkich plikach: Instagram `instagram.com/matilemek`, Messenger `m.me/MateuszLemek`, e-mail `odpowiedzi.opinie@gmail.com`, tel. `797 224 220`. Jeśli coś się zmieni, wyszukaj starą wartość w folderze `oferta/` i podmień, a potem wygeneruj PDF ponownie (sekcja niżej).
+Uzupełnione we wszystkich plikach: Instagram `instagram.com/matilemek`, Messenger `facebook.com/messages/t/MateuszLemek`, e-mail `odpowiedzi.opinie@gmail.com`, tel. `797 224 220`. Jeśli coś się zmieni, wyszukaj starą wartość w folderze `oferta/` i podmień, a potem wygeneruj PDF ponownie (sekcja niżej).
 
 ---
 
