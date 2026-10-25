@@ -29,7 +29,7 @@ BRANZE = [
         ],
         "uwaga": "Reklama podmiotu leczniczego może mieć wyłącznie charakter informacyjny (art. 14 ustawy o działalności leczniczej) — dlatego w scenariuszach nie ma obietnic efektów, „promocji” na zabiegi ani zdjęć przed/po. Ostateczną decyzję o publikacji podejmuje gabinet.",
         "faq": [("Czy taki film jest zgodny z przepisami o reklamie usług medycznych?", "Scenariusz piszę informacyjnie: co robicie, jak wygląda wizyta, jak się umówić — bez zachęt do skorzystania ze świadczeń i bez obietnic efektów. Treść akceptuje gabinet przed publikacją."),
-                ("Czy potrzebuję nagrań z gabinetu?", "Nie — standardowo pracuję na materiale stockowym. Ujęcia z Waszego gabinetu (bez wizerunku pacjentów) zwykle wyglądają bardziej wiarygodnie; montaż z nich to +100 zł za film.")],
+                ("Czy potrzebuję nagrań z gabinetu?", "Nie — standardowo pracuję na materiale stockowym. Ujęcia z Waszego gabinetu (bez wizerunku pacjentów) zwykle wyglądają bardziej wiarygodnie; montaż z nich to +30 zł za film.")],
     },
     {
         "slug": "medycyna-estetyczna", "nazwa": "gabinetów medycyny estetycznej", "krotko": "Medycyna estetyczna",
@@ -60,7 +60,7 @@ BRANZE = [
             ("Poznaj zespół", "Kto, w czym się specjalizuje, jak się umówić."),
         ],
         "uwaga": "Zdjęcia klientek publikujemy tylko za ich zgodą — o zgodę prosi salon.",
-        "faq": [("Czy mogę wysłać zdjęcia z telefonu?", "Tak — montaż z Twoich zdjęć i nagrań to +100 zł za film; zwykle to najlepiej działający materiał w beauty."),
+        "faq": [("Czy mogę wysłać zdjęcia z telefonu?", "Tak — montaż z Twoich zdjęć i nagrań to +30 zł za film; zwykle to najlepiej działający materiał w beauty."),
                 ("Jak często publikować?", "Raz–dwa razy w tygodniu wystarczy, żeby profil żył — stąd pakiety 4 i 8 filmów.")],
     },
     {
@@ -76,7 +76,7 @@ BRANZE = [
             ("Trener w 30 sekund", "Kim jestem, z kim pracuję, jak się umówić na konsultację."),
         ],
         "uwaga": "Nie obiecujemy w filmach konkretnych efektów sylwetkowych ani zdrowotnych.",
-        "faq": [("Czy nagracie zajęcia u nas?", "Nie nagrywam na miejscu — montuję z Twoich nagrań z telefonu (+100 zł) albo ze stocku."),
+        "faq": [("Czy nagracie zajęcia u nas?", "Nie nagrywam na miejscu — montuję z Twoich nagrań z telefonu (+30 zł) albo ze stocku."),
                 ("Czy to działa dla jednego trenera?", "Tak — pakiet Start (4 filmy) zwykle wystarcza na regularny profil trenera.")],
     },
     {
@@ -92,7 +92,7 @@ BRANZE = [
             ("Dzielnica", "Krótki przewodnik po okolicy: szkoły, komunikacja, zieleń — przyciąga kupujących z innych miast."),
         ],
         "uwaga": "Dane w filmie (metraż, cena) pochodzą z ogłoszenia — sprawdza je agent przed publikacją.",
-        "faq": [("Ile kosztuje film do jednej oferty?", "149 zł za pojedynczy film albo w pakiecie: 4 filmy za 449 zł, 8 filmów z publikacją za 799 zł. Montaż ze zdjęć z ogłoszenia to standard w tej branży — dopłata +100 zł nie dotyczy zdjęć z oferty."),
+        "faq": [("Ile kosztuje film do jednej oferty?", "49 zł za pojedynczy film albo w pakiecie: 4 filmy za 149 zł, 8 filmów z publikacją za 279 zł. Montaż ze zdjęć z ogłoszenia to standard w tej branży — dopłata +30 zł nie dotyczy zdjęć z oferty."),
                 ("Jak szybko?", "48 godzin od wysłania linku do ogłoszenia.")],
     },
     {
@@ -108,7 +108,7 @@ BRANZE = [
             ("Pakiet sezonowy", "Rolka pod konkretną usługę na jesień i zimę."),
         ],
         "uwaga": "Tablice rejestracyjne klientów zamazujemy w montażu.",
-        "faq": [("Czy montujecie z moich nagrań?", "Tak — w detailingu to najlepiej działający materiał (+100 zł za film)."),
+        "faq": [("Czy montujecie z moich nagrań?", "Tak — w detailingu to najlepiej działający materiał (+30 zł za film)."),
                 ("Czy dodacie cenę na ekranie?", "Tak, jeśli ją podasz — cena „od” na końcu filmu.")],
     },
     {
@@ -124,7 +124,7 @@ BRANZE = [
             ("Dowóz i odbiór", "Gdzie zamówić, jak szybko, jaki zasięg dowozu."),
         ],
         "uwaga": "Nie robię reklam napojów alkoholowych (ograniczenia ustawy o wychowaniu w trzeźwości) — film może pokazać lokal i jedzenie.",
-        "faq": [("Czy wystarczą nagrania z telefonu?", "Tak — 4–6 ujęć po 3–5 sekund z kuchni wystarczy na jeden film (+100 zł za montaż z materiałów)."),
+        "faq": [("Czy wystarczą nagrania z telefonu?", "Tak — 4–6 ujęć po 3–5 sekund z kuchni wystarczy na jeden film (+30 zł za montaż z materiałów)."),
                 ("Czy możecie publikować za nas?", "Tak, w pakiecie Pro — 8 filmów miesięcznie z publikacją, opisami i hashtagami.")],
     },
     {
@@ -141,7 +141,7 @@ BRANZE = [
         ],
         "uwaga": "Nie obiecujemy zdawalności ani wyników egzaminu.",
         "faq": [("Czy filmy są dla młodszych odbiorców?", "Tak — dobieram tempo, muzykę i napisy pod TikTok i Reels."),
-                ("Czy mogę zamówić jeden film pod nabór?", "Tak, 149 zł za pojedynczy film; pierwszy gratis.")],
+                ("Czy mogę zamówić jeden film pod nabór?", "Tak, 49 zł za pojedynczy film; pierwszy gratis.")],
     },
     {
         "slug": "fotowoltaika-pompy-ciepla", "nazwa": "firm fotowoltaicznych i pomp ciepła", "krotko": "Fotowoltaika i OZE",
@@ -156,7 +156,7 @@ BRANZE = [
             ("Dofinansowanie", "Jaki program, dla kogo, jakie dokumenty — informacyjnie, z odesłaniem do źródła."),
         ],
         "uwaga": "W filmach nie podajemy gwarantowanych oszczędności ani zwrotu inwestycji — tylko fakty z realizacji i aktualne zasady programów.",
-        "faq": [("Czy możecie użyć zdjęć z realizacji?", "Tak, montaż z Twoich zdjęć i nagrań (+100 zł za film)."),
+        "faq": [("Czy możecie użyć zdjęć z realizacji?", "Tak, montaż z Twoich zdjęć i nagrań (+30 zł za film)."),
                 ("Czy treść o dotacjach będzie aktualna?", "Opieram się na tym, co przekażesz i na oficjalnych stronach programów; datę i źródło weryfikujesz przed publikacją.")],
     },
     {
@@ -178,7 +178,7 @@ BRANZE = [
 ]
 
 FAQ_WSPOLNE = [
-    ("Ile kosztuje?", "Pierwszy film dla nowej firmy jest gratis. Potem: pojedynczy film 149 zł, pakiet Start (4 filmy/mies.) 449 zł, pakiet Pro (8 filmów/mies. z publikacją, opisami i hashtagami) 799 zł. Ceny końcowe, rachunek, bez umowy na rok."),
+    ("Ile kosztuje?", "Pierwszy film dla nowej firmy jest gratis. Potem: pojedynczy film 49 zł, pakiet Start (4 filmy/mies.) 149 zł, pakiet Pro (8 filmów/mies. z publikacją, opisami i hashtagami) 279 zł. Ceny końcowe, rachunek, bez umowy na rok."),
     ("Ile trwa?", "Pierwszy film w 48 godzin od otrzymania opisu. Jedna runda poprawek w cenie."),
 ]
 
@@ -187,20 +187,20 @@ def plan_cards(prefix=""):
     return f"""    <div class="plans">
       <div class="plan">
         <div class="name">Pojedynczy film</div>
-        <div class="price">149 zł<small>/ film</small></div>
-        <p class="sub">Pierwszy dla nowej firmy jest gratis — 149 zł płacisz dopiero za kolejny.</p>
+        <div class="price">49 zł<small>/ film</small></div>
+        <p class="sub">Pierwszy dla nowej firmy jest gratis — 49 zł płacisz dopiero za kolejny.</p>
         <a class="btn" href="{prefix}./#kontakt">Zacznij od darmowego</a>
       </div>
       <div class="plan featured">
         <span class="tag">Najczęściej wybierany</span>
         <div class="name">Pakiet Pro</div>
-        <div class="price">799 zł<small>/ miesiąc</small></div>
+        <div class="price">279 zł<small>/ miesiąc</small></div>
         <p class="sub">8 filmów miesięcznie z publikacją, opisami i hashtagami.</p>
         <a class="btn primary" href="{prefix}./#kontakt">Wybieram Pro</a>
       </div>
       <div class="plan">
         <div class="name">Pakiet Start</div>
-        <div class="price">449 zł<small>/ miesiąc</small></div>
+        <div class="price">149 zł<small>/ miesiąc</small></div>
         <p class="sub">4 filmy miesięcznie, publikujesz sam.</p>
         <a class="btn" href="{prefix}./#kontakt">Wybieram Start</a>
       </div>
@@ -239,7 +239,7 @@ def build_branza(b):
         {"@type": "Service", "@id": url + "#usluga", "name": f"Rolki reklamowe dla {b['nazwa']}",
          "serviceType": "Produkcja krótkich filmów reklamowych 9:16", "provider": {"@id": BASE + "#business"},
          "areaServed": [{"@type": "City", "name": "Katowice"}, {"@type": "AdministrativeArea", "name": "Górny Śląsk"}],
-         "offers": {"@type": "Offer", "price": "149", "priceCurrency": "PLN", "url": BASE + "cennik.html"}},
+         "offers": {"@type": "Offer", "price": "49", "priceCurrency": "PLN", "url": BASE + "cennik.html"}},
         {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]}]}
     demo = ""
     if b["demo"]:
@@ -312,7 +312,7 @@ def build_index_branz():
     <p class="lead" style="margin-top:24px">Ten sam format i te same ceny — inne tematy, inne zasady. Wybierz swoją branżę: znajdziesz pomysły na pierwsze filmy i to, na co uważam przy treści.</p>
     <ul class="plain branze-lista" style="margin-top:48px">
 {items}
-      <li><a href="../dla-agencji.html"><span class="serif" style="font-size:26px">Agencje i social media managerowie</span><br><span class="muted small">Filmy white-label w hurcie — 99 zł za film, bez mojej marki.</span></a></li>
+      <li><a href="../dla-agencji.html"><span class="serif" style="font-size:26px">Agencje i social media managerowie</span><br><span class="muted small">Filmy white-label w hurcie — 35 zł za film, bez mojej marki.</span></a></li>
     </ul>
   </div>
 </main>"""
@@ -323,17 +323,17 @@ def build_index_branz():
 
 def build_agencje():
     url = BASE + "dla-agencji.html"
-    title = "Rolki white-label dla agencji social media — 99 zł/film"
-    desc = "Rolki 9:16 z lektorem i napisami dla agencji i social media managerów: bez mojej marki, prawo do odsprzedaży, 48 h, od 99 zł za film."
+    title = "Rolki white-label dla agencji social media — 35 zł/film"
+    desc = "Rolki 9:16 z lektorem i napisami dla agencji i social media managerów: bez mojej marki, prawo do odsprzedaży, 48 h, od 35 zł za film."
     faq = [("Czy mogę sprzedawać filmy jako swoje?", "Tak — film nie ma mojej marki, a licencja obejmuje przekazanie go Twojemu klientowi."),
-           ("Jaki jest minimalny wolumen?", "Brak minimum. Stawka 99 zł obowiązuje od 5 filmów w miesiącu; pojedyncze filmy po 129 zł."),
+           ("Jaki jest minimalny wolumen?", "Brak minimum. Stawka 35 zł obowiązuje od 5 filmów w miesiącu; pojedyncze filmy po 45 zł."),
            ("Jak przekazujecie brief?", "Arkusz albo e-mail: firma, oferta, 3–4 zdania, dane do ekranu końcowego, styl. Odsyłam MP4 w 48 h."),
            ("Kto odpowiada za treść?", "Ty i Twój klient akceptujecie scenariusz przed produkcją; ja pilnuję formy i zgodności z briefem.")]
     ld = {"@context": "https://schema.org", "@graph": [
         {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Oferta", "item": BASE}, {"@type": "ListItem", "position": 2, "name": "Dla agencji", "item": url}]},
         {"@type": "Service", "name": "Rolki white-label dla agencji", "serviceType": "Produkcja krótkich filmów 9:16 w modelu white-label", "provider": {"@id": BASE + "#business"},
          "areaServed": {"@type": "Country", "name": "Polska"},
-         "offers": [{"@type": "Offer", "name": "Film white-label (od 5/mies.)", "price": "99", "priceCurrency": "PLN"}, {"@type": "Offer", "name": "Film white-label pojedynczy", "price": "129", "priceCurrency": "PLN"}]},
+         "offers": [{"@type": "Offer", "name": "Film white-label (od 5/mies.)", "price": "35", "priceCurrency": "PLN"}, {"@type": "Offer", "name": "Film white-label pojedynczy", "price": "45", "priceCurrency": "PLN"}]},
         {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]}]}
     faqh = "\n".join(f"<details><summary>{q}</summary><p>{a}</p></details>" for q, a in faq)
     body = f"""<main id="main" class="page">
@@ -346,9 +346,9 @@ def build_agencje():
     <section style="padding:96px 0 0;border:0">
       <h2 style="margin-bottom:40px">Hurt, nie abonament.</h2>
       <div class="plans">
-        <div class="plan"><div class="name">Pojedynczy film</div><div class="price">129 zł<small>/ film</small></div><p class="sub">Bez minimum, bez umowy.</p><a class="btn" href="mailto:mateuszlekem@gmail.com?subject=White-label%20%E2%80%94%20pojedynczy%20film">Zamów</a></div>
-        <div class="plan featured"><span class="tag">Dla stałych partnerów</span><div class="name">Od 5 filmów / mies.</div><div class="price">99 zł<small>/ film</small></div><p class="sub">Rozliczenie raz w miesiącu za faktycznie oddane filmy.</p><a class="btn primary" href="mailto:mateuszlekem@gmail.com?subject=White-label%20%E2%80%94%20sta%C5%82a%20wsp%C3%B3%C5%82praca">Porozmawiajmy</a></div>
-        <div class="plan"><div class="name">Montaż z materiałów klienta</div><div class="price">+50 zł<small>/ film</small></div><p class="sub">Gdy dosyłasz zdjęcia i nagrania od klienta.</p><a class="btn" href="mailto:mateuszlekem@gmail.com?subject=White-label%20%E2%80%94%20monta%C5%BC">Zapytaj</a></div>
+        <div class="plan"><div class="name">Pojedynczy film</div><div class="price">45 zł<small>/ film</small></div><p class="sub">Bez minimum, bez umowy.</p><a class="btn" href="mailto:mateuszlekem@gmail.com?subject=White-label%20%E2%80%94%20pojedynczy%20film">Zamów</a></div>
+        <div class="plan featured"><span class="tag">Dla stałych partnerów</span><div class="name">Od 5 filmów / mies.</div><div class="price">35 zł<small>/ film</small></div><p class="sub">Rozliczenie raz w miesiącu za faktycznie oddane filmy.</p><a class="btn primary" href="mailto:mateuszlekem@gmail.com?subject=White-label%20%E2%80%94%20sta%C5%82a%20wsp%C3%B3%C5%82praca">Porozmawiajmy</a></div>
+        <div class="plan"><div class="name">Montaż z materiałów klienta</div><div class="price">+20 zł<small>/ film</small></div><p class="sub">Gdy dosyłasz zdjęcia i nagrania od klienta.</p><a class="btn" href="mailto:mateuszlekem@gmail.com?subject=White-label%20%E2%80%94%20monta%C5%BC">Zapytaj</a></div>
       </div>
       <p class="muted small" style="margin-top:24px">Ceny końcowe w PLN, rachunek. Pierwszy film testowy dla agencji — gratis, na briefie Twojego prawdziwego klienta.</p>
     </section>

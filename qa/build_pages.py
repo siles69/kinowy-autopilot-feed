@@ -28,12 +28,12 @@ ICONS = {
 
 FAQ = [
     ("Ile to trwa?", "Pierwszy film dostajesz w ciągu 48 godzin od momentu, gdy prześlesz mi opis firmy. W pakietach filmy przychodzą regularnie: w Start — jeden tygodniowo, w Pro — dwa tygodniowo. Poprawki robię zwykle tego samego lub następnego dnia."),
-    ("Czy potrzebuję własnych zdjęć albo nagrań?", "Nie. Standardowo pracuję na materiale stockowym dobranym do branży i scenariusza. Jeśli masz własne zdjęcia lub filmy (wnętrze lokalu, efekty zabiegów, gotowe auto), zmontuję z nich — to dopłata 100 zł za film; prawdziwe wnętrze lub efekty zwykle wyglądają bardziej wiarygodnie niż stock."),
+    ("Czy potrzebuję własnych zdjęć albo nagrań?", "Nie. Standardowo pracuję na materiale stockowym dobranym do branży i scenariusza. Jeśli masz własne zdjęcia lub filmy (wnętrze lokalu, efekty zabiegów, gotowe auto), zmontuję z nich — to dopłata 30 zł za film; prawdziwe wnętrze lub efekty zwykle wyglądają bardziej wiarygodnie niż stock."),
     ("Czy publikujecie filmy za mnie?", "W pakiecie Pro tak — wrzucam filmy na Twój TikTok, Instagram i Facebook razem z opisem i hashtagami, według ustalonego harmonogramu. W pakiecie Start i filmie testowym dostajesz gotowe pliki i publikujesz sam. Nie potrzebuję hasła do Twoich kont — wystarczy dostęp jako współpracownik w Meta Business lub przesłanie filmów do akceptacji."),
     ("Jak płacę?", "Przelewem na konto, z góry za miesiąc pakietu; zaczynam po zaksięgowaniu. Wystawiam rachunek — prowadzę działalność nierejestrowaną, więc nie ma faktury VAT, ale rachunek możesz wrzucić w koszty. Darmowy film to naprawdę darmowy film: zero płatności, zero zobowiązań."),
     ("Czy mogę zrezygnować?", "Tak, w każdym momencie — pakiet rozliczam co miesiąc, bez umowy na czas określony i bez okresu wypowiedzenia. Jeśli po pierwszym miesiącu uznasz, że to nie dla Ciebie, po prostu nie przedłużasz. Wszystkie filmy, które dostałeś, zostają Twoje."),
     ("Czy film będzie wyglądał jak AI?", "Lektor jest generowany przez AI i nie udaję, że to aktor — ale materiał wideo jest prawdziwy (stock albo Twoje nagrania), scenariusz piszę sam pod Twoją ofertę, a napisy i montaż robię ręcznie. Najprościej ocenić to na własnym przykładzie: jeśli po obejrzeniu darmowego filmu uznasz, że brzmi sztucznie, nie płacisz nic i nie musisz go używać."),
-    ("Czy mogę zamówić jeden film bez pakietu?", "Tak — pojedynczy film kosztuje 149 zł. Pierwszy film dla nowej firmy jest gratis, więc płacisz dopiero za drugi. Pakiety opłacają się, gdy chcesz publikować regularnie: w Start jeden film wychodzi po 112 zł, w Pro — po 100 zł z publikacją."),
+    ("Czy mogę zamówić jeden film bez pakietu?", "Tak — pojedynczy film kosztuje 49 zł. Pierwszy film dla nowej firmy jest gratis, więc płacisz dopiero za drugi. Pakiety opłacają się, gdy chcesz publikować regularnie: w Start jeden film wychodzi po 112 zł, w Pro — po 30 zł z publikacją."),
 ]
 
 DEMOS = [
@@ -283,22 +283,22 @@ def build_index():
     <div class="plans reveal">
       <div class="plan">
         <div class="name">Pojedynczy film</div>
-        <div class="price">149 zł<small>/ film</small></div>
-        <p class="sub">Jeden film bez pakietu. Pierwszy dla nowej firmy jest gratis — 149 zł płacisz dopiero za kolejny.</p>
+        <div class="price">49 zł<small>/ film</small></div>
+        <p class="sub">Jeden film bez pakietu. Pierwszy dla nowej firmy jest gratis — 49 zł płacisz dopiero za kolejny.</p>
         <ul><li>1 rolka 9:16, 20–35 s</li><li>polski lektor AI i napisy</li><li>materiał stockowy</li><li>1 runda poprawek</li></ul>
         <a class="btn" href="#kontakt">Zacznij od darmowego</a>
       </div>
       <div class="plan featured">
         <span class="tag">Najczęściej wybierany</span>
         <div class="name">Pakiet Pro</div>
-        <div class="price">799 zł<small>/ miesiąc</small></div>
+        <div class="price">279 zł<small>/ miesiąc</small></div>
         <p class="sub">Dwa filmy tygodniowo i publikacja na Twoich profilach.</p>
         <ul><li>8 rolek miesięcznie</li><li>publikacja na TikTok, Instagram i Facebook</li><li>opisy postów i hashtagi</li><li>lektor, napisy, muzyka</li><li>1 runda poprawek na film</li></ul>
         <a class="btn primary" href="#kontakt">Wybieram Pro</a>
       </div>
       <div class="plan">
         <div class="name">Pakiet Start</div>
-        <div class="price">449 zł<small>/ miesiąc</small></div>
+        <div class="price">149 zł<small>/ miesiąc</small></div>
         <p class="sub">Jeden nowy film tygodniowo. Ty publikujesz.</p>
         <ul><li>4 rolki miesięcznie</li><li>lektor, napisy, muzyka</li><li>materiał stockowy</li><li>1 runda poprawek na film</li><li>pliki gotowe do publikacji</li></ul>
         <a class="btn" href="#kontakt">Wybieram Start</a>
@@ -306,7 +306,7 @@ def build_index():
     </div>
     <div class="price-notes reveal">
       <p>Pierwszy film zawsze gratis — niezależnie od pakietu.</p>
-      <p>Ceny końcowe w PLN, rachunek, bez VAT, bez zobowiązań na rok. Montaż z Twoich zdjęć lub nagrań: +100 zł za film.</p>
+      <p>Ceny końcowe w PLN, rachunek, bez VAT, bez zobowiązań na rok. Montaż z Twoich zdjęć lub nagrań: +30 zł za film.</p>
     </div>
   </div>
 </section>
@@ -458,22 +458,22 @@ def build_cennik():
     <div class="plans">
       <div class="plan">
         <div class="name">Pojedynczy film</div>
-        <div class="price">149 zł<small>/ film</small></div>
-        <p class="sub">Jeden film bez pakietu. Pierwszy dla nowej firmy jest gratis — 149 zł płacisz dopiero za kolejny.</p>
+        <div class="price">49 zł<small>/ film</small></div>
+        <p class="sub">Jeden film bez pakietu. Pierwszy dla nowej firmy jest gratis — 49 zł płacisz dopiero za kolejny.</p>
         <ul><li>1 rolka 9:16, 20–35 s</li><li>polski lektor AI i napisy</li><li>materiał stockowy</li><li>1 runda poprawek</li></ul>
         <a class="btn" href="./#kontakt">Zacznij od darmowego</a>
       </div>
       <div class="plan featured">
         <span class="tag">Najczęściej wybierany</span>
         <div class="name">Pakiet Pro</div>
-        <div class="price">799 zł<small>/ miesiąc</small></div>
+        <div class="price">279 zł<small>/ miesiąc</small></div>
         <p class="sub">Dwa filmy tygodniowo i publikacja na Twoich profilach.</p>
         <ul><li>8 rolek miesięcznie</li><li>publikacja na TikTok, Instagram i Facebook</li><li>opisy postów i hashtagi</li><li>lektor, napisy, muzyka</li><li>1 runda poprawek na film</li></ul>
         <a class="btn primary" href="./#kontakt">Wybieram Pro</a>
       </div>
       <div class="plan">
         <div class="name">Pakiet Start</div>
-        <div class="price">449 zł<small>/ miesiąc</small></div>
+        <div class="price">149 zł<small>/ miesiąc</small></div>
         <p class="sub">Jeden nowy film tygodniowo. Ty publikujesz.</p>
         <ul><li>4 rolki miesięcznie</li><li>lektor, napisy, muzyka</li><li>materiał stockowy</li><li>1 runda poprawek na film</li><li>pliki gotowe do publikacji</li></ul>
         <a class="btn" href="./#kontakt">Wybieram Start</a>
@@ -482,7 +482,7 @@ def build_cennik():
 
     <div class="price-notes">
       <p>Pierwszy film zawsze gratis — niezależnie od pakietu.</p>
-      <p>Montaż z Twoich własnych zdjęć lub nagrań: +100 zł za film. Prawdziwe wnętrze, efekty i produkty zwykle wyglądają bardziej wiarygodnie niż materiał stockowy.</p>
+      <p>Montaż z Twoich własnych zdjęć lub nagrań: +30 zł za film. Prawdziwe wnętrze, efekty i produkty zwykle wyglądają bardziej wiarygodnie niż materiał stockowy.</p>
     </div>
 
     <div class="cennik-steps">
