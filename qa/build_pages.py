@@ -330,7 +330,7 @@ def build_index():
     <h2>Napisz, a za 48 h masz pierwszy film.</h2>
     <p class="lead">Najszybciej przez Instagram albo Messenger. Odpowiadam w dni robocze, zwykle w kilka godzin. Jestem z Katowic — mogę też wpaść osobiście.</p>
     <div class="contact-grid">
-      <a class="btn primary" href="https://www.instagram.com/matilemek/" target="_blank" rel="noopener">{ICONS['ig']}Instagram DM<small>@matilemek</small></a>
+      <a class="btn primary" href="https://www.instagram.com/mateusz.le.business/" target="_blank" rel="noopener">{ICONS['ig']}Instagram DM<small>@mateusz.le.business</small></a>
       <a class="btn" href="https://www.facebook.com/messages/t/MateuszLemek" target="_blank" rel="noopener">{ICONS['msg']}Messenger<small>Mateusz Lemek</small></a>
       <a class="btn" href="mailto:mateuszlekem@gmail.com">{ICONS['mail']}E-mail<small>mateuszlekem@gmail.com</small></a>
       <a class="btn" href="tel:+48797224220">{ICONS['tel']}Telefon<small>797 224 220</small></a>
@@ -491,7 +491,7 @@ def build_cennik():
       <div><div class="n">03</div><b>Publikacja</b><p>Ty — albo ja za Ciebie (Pro), razem z opisami i hashtagami.</p></div>
     </div>
 
-    <p class="print-contact">Mateusz Lekem · Katowice · <a href="mailto:mateuszlekem@gmail.com">mateuszlekem@gmail.com</a> · tel. 797 224 220 · Instagram: <a href="https://www.instagram.com/matilemek/">instagram.com/matilemek</a> · portfolio i demo: <a href="{BASE}">siles69.github.io/kinowy-autopilot-feed/oferta/</a></p>
+    <p class="print-contact">Mateusz Lekem · Katowice · <a href="mailto:mateuszlekem@gmail.com">mateuszlekem@gmail.com</a> · tel. 797 224 220 · Instagram: <a href="https://www.instagram.com/mateusz.le.business/">instagram.com/mateusz.le.business</a> · portfolio i demo: <a href="{BASE}">siles69.github.io/kinowy-autopilot-feed/oferta/</a></p>
 
     <p class="fine">Ceny końcowe w PLN, bez VAT (działalność nierejestrowana — wystawiam rachunek). Rozliczenie miesięczne, rezygnacja w dowolnym momencie. Zasady współpracy: <a href="regulamin.html">regulamin</a> i <a href="polityka-prywatnosci.html">polityka prywatności</a>.</p>
     <p class="print-fine">Ceny końcowe w PLN (brutto, bez VAT — działalność nierejestrowana, wystawiam rachunek). Rozliczenie miesięczne, rezygnacja w dowolnym momencie, bez umowy na czas określony. Filmy powstają z użyciem narzędzi AI (lektor, montaż); materiał wideo pochodzi z licencjonowanych bibliotek lub od klienta. Nazwy firm w filmach demo są fikcyjne. Usługodawca: Mateusz Lekem, Katowice · mateuszlekem@gmail.com · 797 224 220. Regulamin i polityka prywatności: siles69.github.io/kinowy-autopilot-feed/oferta/</p>
